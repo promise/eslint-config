@@ -5,7 +5,7 @@
 /** @type{ import("eslint").Linter.RulesRecord } */
 const rules = {
   "array-bracket-newline": ["error"],
-  "array-bracket-spacing": ["error", { singleValue: false, objectsInArrays: false, arraysInArrays: false }],
+  "array-bracket-spacing": ["error", "never", { singleValue: false, objectsInArrays: false, arraysInArrays: false }],
   "array-element-newline": ["error", "consistent", { multiline: true }],
   "arrow-parens": ["error", "as-needed"],
   "arrow-spacing": ["error"],
