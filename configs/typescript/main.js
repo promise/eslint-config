@@ -22,7 +22,7 @@ const rules = {
   "@typescript-eslint/member-delimiter-style": ["error"],
   "@typescript-eslint/member-ordering": ["error"],
   "@typescript-eslint/method-signature-style": ["error", "method"],
-  "@typescript-eslint/naming-convention": ["error"],
+  "@typescript-eslint/naming-convention": ["off"],
   "@typescript-eslint/no-base-to-string": ["error"],
   "@typescript-eslint/no-confusing-non-null-assertion": ["error"],
   "@typescript-eslint/no-confusing-void-expression": ["off"],
