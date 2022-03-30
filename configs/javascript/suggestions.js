@@ -11,7 +11,7 @@ const rules = {
   "capitalized-comments": ["error", "never"],
   "class-methods-use-this": ["error"],
   "complexity": ["warn"],
-  "consistent-return": ["error"],
+  "consistent-return": ["off"],
   "consistent-this": ["error"],
   "curly": ["error", "multi-line"],
   "default-case": ["error"],
