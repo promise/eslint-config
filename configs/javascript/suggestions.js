@@ -42,7 +42,7 @@ const rules = {
   "no-bitwise": ["error"],
   "no-caller": ["error"],
   "no-case-declarations": ["error"],
-  "no-confusing-arrow": ["error"],
+  "no-confusing-arrow": ["off"],
   "no-console": ["warn"],
   "no-continue": ["error"],
   "no-delete-var": ["error"],
