@@ -55,7 +55,7 @@ const rules = {
   "no-unsafe-optional-chaining": ["error", { disallowArithmeticOperators: true }],
   "no-unused-private-class-members": ["error"],
   "no-unused-vars": ["error"],
-  "no-use-before-define": ["error"],
+  "no-use-before-define": ["error", "nofunc"],
   "no-useless-backreference": ["error"],
   "require-atomic-updates": ["error", { allowProperties: true }],
   "use-isnan": ["error"],
