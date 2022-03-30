@@ -5,7 +5,7 @@
 /** @type{ import("eslint").Linter.RulesRecord } */
 const rules = {
   "@typescript-eslint/adjacent-overload-signatures": ["error"],
-  "@typescript-eslint/array-type": ["error", {default: "array-simple"}],
+  "@typescript-eslint/array-type": ["error", { default: "array-simple" }],
   "@typescript-eslint/await-thenable": ["error"],
   "@typescript-eslint/ban-ts-comment": ["error"],
   "@typescript-eslint/ban-tslint-comment": ["error"],
@@ -14,7 +14,7 @@ const rules = {
   "@typescript-eslint/consistent-indexed-object-style": ["error"],
   "@typescript-eslint/consistent-type-assertions": ["error"],
   "@typescript-eslint/consistent-type-definitions": ["error", "interface"],
-  "@typescript-eslint/consistent-type-exports": ["error", {fixMixedExportsWithInlineTypeSpecifier: true}],
+  "@typescript-eslint/consistent-type-exports": ["error", { fixMixedExportsWithInlineTypeSpecifier: true }],
   "@typescript-eslint/consistent-type-imports": ["error"],
   "@typescript-eslint/explicit-function-return-type": ["error"],
   "@typescript-eslint/explicit-member-accessibility": ["error"],
@@ -81,7 +81,7 @@ const rules = {
   "@typescript-eslint/restrict-plus-operands": ["error"],
   "@typescript-eslint/restrict-template-expressions": ["error"],
   "@typescript-eslint/sort-type-union-intersection-members": ["error"],
-  "@typescript-eslint/strict-boolean-expressions": ["error"],
+  "@typescript-eslint/strict-boolean-expressions": ["off"],
   "@typescript-eslint/switch-exhaustiveness-check": ["error"],
   "@typescript-eslint/triple-slash-reference": ["error"],
   "@typescript-eslint/type-annotation-spacing": ["error"],
