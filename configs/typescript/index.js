@@ -13,6 +13,6 @@ module.exports = {
   rules: {
     ...require("../javascript").rules,
     ...require("./main"),
-    ...require("./overrides"),
+    ...require("./fixes"),
   },
 };
