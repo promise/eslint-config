@@ -70,7 +70,7 @@ const rules = {
   "no-lone-blocks": ["error"],
   "no-lonely-if": ["error"],
   "no-loop-func": ["error"],
-  "no-magic-numbers": ["warn"],
+  "no-magic-numbers": ["off"],
   "no-mixed-operators": ["error"],
   "no-multi-assign": ["error"],
   "no-multi-str": ["error"],

@@ -31,7 +31,7 @@ const rules = {
   "linebreak-style": ["error", "windows"],
   "lines-around-comment": ["error", {beforeBlockComment: true, allowBlockStart: true, allowClassStart: true, allowObjectStart: true, allowArrayStart: true}],
   "lines-between-class-members": ["error"],
-  "max-len": ["error"],
+  "max-len": ["off"],
   "max-statements-per-line": ["error"],
   "multiline-ternary": ["error", "always-multiline"],
   "new-parens": ["error"],
