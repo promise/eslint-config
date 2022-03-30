@@ -77,7 +77,7 @@ const rules = {
   "@typescript-eslint/prefer-return-this-type": ["error"],
   "@typescript-eslint/prefer-string-starts-ends-with": ["error"],
   "@typescript-eslint/prefer-ts-expect-error": ["error"],
-  "@typescript-eslint/promise-function-async": ["error"],
+  "@typescript-eslint/promise-function-async": ["off"],
   "@typescript-eslint/restrict-plus-operands": ["error"],
   "@typescript-eslint/restrict-template-expressions": ["error"],
   "@typescript-eslint/sort-type-union-intersection-members": ["error"],
