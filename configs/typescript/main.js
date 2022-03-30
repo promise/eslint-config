@@ -86,7 +86,7 @@ const rules = {
   "@typescript-eslint/triple-slash-reference": ["error"],
   "@typescript-eslint/type-annotation-spacing": ["error"],
   "@typescript-eslint/typedef": ["error"],
-  "@typescript-eslint/unbound-method": ["error"],
+  "@typescript-eslint/unbound-method": ["off"],
   "@typescript-eslint/unified-signatures": ["error"],
 };
 
