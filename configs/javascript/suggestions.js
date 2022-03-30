@@ -25,7 +25,7 @@ const rules = {
   "grouped-accessor-pairs": ["error", "getBeforeSet"],
   "guard-for-in": ["off"],
   "id-denylist": ["off"],
-  "id-length": ["warn"],
+  "id-length": ["warn", { exceptions: ["a", "b", "i", "_"]}],
   "id-match": ["off"],
   "init-declarations": ["error"],
   "max-classes-per-file": ["warn"],
