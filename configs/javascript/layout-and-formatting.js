@@ -29,7 +29,7 @@ const rules = {
   "line-comment-position": ["error"],
   "linebreak-style": ["error", "windows"],
   "lines-around-comment": ["error", { beforeBlockComment: true, allowBlockStart: true, allowClassStart: true, allowObjectStart: true, allowArrayStart: true }],
-  "lines-between-class-members": ["error"],
+  "lines-between-class-members": ["off"],
   "max-len": ["off"],
   "max-statements-per-line": ["error"],
   "multiline-ternary": ["error", "always-multiline"],
