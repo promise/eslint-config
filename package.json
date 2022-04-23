@@ -1,5 +1,5 @@
 {
-  "name": "@promise/eslint-config",
+  "name": "eslint-config-promise",
   "description": "A collection of strict ESLint configurations",
   "main": ".eslintrc.js",
   "scripts": {
