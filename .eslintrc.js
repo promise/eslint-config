@@ -10,7 +10,8 @@ module.exports = {
     ecmaVersion: "latest",
   },
   overrides: [
-    {files: ["**/*.js"], ...require("./configs/javascript")},
-    {files: ["**/*.ts"], ...require("./configs/typescript")},
+    { files: ["**/*.js"], ...require("./configs/javascript") },
+    { files: ["**/*.ts"], ...require("./configs/typescript") },
   ],
+  ignorePatterns: ["node_modules"],
 };

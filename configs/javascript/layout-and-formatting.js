@@ -1,4 +1,3 @@
-/* eslint-disable max-len */
 // https://eslint.org/docs/rules/#layout-formatting
 
 // @ts-check
@@ -22,7 +21,7 @@ const rules = {
   "function-paren-newline": ["error", "consistent"],
   "generator-star-spacing": ["error"],
   "implicit-arrow-linebreak": ["error"],
-  "indent": ["error", 2], // eslint-disable-next-line no-magic-numbers
+  "indent": ["error", 2],
   "jsx-quotes": ["error", "prefer-double"],
   "key-spacing": ["error"],
   "keyword-spacing": ["error"],

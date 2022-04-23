@@ -3,7 +3,7 @@
   "description": "A collection of strict ESLint configurations",
   "main": ".eslintrc.js",
   "scripts": {
-    "lint": "eslint"
+    "lint": "eslint . --max-warnings=0"
   },
   "author": "Glenn <glenn@not-tech.support> (https://not-tech.support)",
   "license": "UNLICENSED",
