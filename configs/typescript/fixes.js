@@ -1,4 +1,3 @@
-/* eslint-disable max-len */
 // https://typescript-eslint.io/rules/#extension-rules
 
 const jsRules = require("../javascript").rules;

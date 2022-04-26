@@ -1,4 +1,3 @@
-/* eslint-disable max-len */
 // https://eslint.org/docs/rules/#possible-problems
 
 // @ts-check

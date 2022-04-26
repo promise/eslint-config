@@ -1,4 +1,3 @@
-/* eslint-disable max-len */
 // https://eslint.org/docs/rules/#suggestions
 
 // @ts-check
@@ -71,7 +70,7 @@ const rules = {
   "no-lonely-if": ["error"],
   "no-loop-func": ["error"],
   "no-magic-numbers": ["off"],
-  "no-mixed-operators": ["error"],
+  "no-mixed-operators": ["off"],
   "no-multi-assign": ["error"],
   "no-multi-str": ["error"],
   "no-negated-condition": ["error"],
