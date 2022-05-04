@@ -8,7 +8,7 @@
   "author": "Glenn <glenn@not-tech.support> (https://not-tech.support)",
   "license": "UNLICENSED",
   "devDependencies": {
-    "@types/eslint": "^8.4.1",
+    "@types/eslint": "^8.4.2",
     "@typescript-eslint/eslint-plugin": "^5.22.0",
     "@typescript-eslint/parser": "^5.22.0",
     "eslint": "^8.14.0"
