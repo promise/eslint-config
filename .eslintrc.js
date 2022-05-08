@@ -13,5 +13,5 @@ module.exports = {
     { files: ["**/*.js"], ...require("./configs/javascript") },
     { files: ["**/*.ts"], ...require("./configs/typescript") },
   ],
-  ignorePatterns: ["node_modules"],
+  ignorePatterns: ["node_modules", "build"],
 };
