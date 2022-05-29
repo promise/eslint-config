@@ -136,7 +136,7 @@ const rules = {
   "prefer-spread": ["error"],
   "prefer-template": ["error"],
   "quote-props": ["error", "consistent-as-needed"],
-  "radix": ["error", "as-needed"],
+  "radix": ["error"],
   "require-await": ["error"],
   "require-unicode-regexp": ["warn"],
   "require-yield": ["error"],
