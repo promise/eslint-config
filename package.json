@@ -1,12 +1,13 @@
 {
   "name": "eslint-config-promise",
+  "author": "Glenn <glenn@not-tech.support> (https://not-tech.support)",
   "description": "A collection of strict ESLint configurations",
   "main": ".eslintrc.js",
-  "scripts": {
-    "lint": "eslint . --max-warnings=0"
-  },
-  "author": "Glenn <glenn@not-tech.support> (https://not-tech.support)",
   "license": "UNLICENSED",
+  "scripts": {
+    "lint": "eslint . --max-warnings=0",
+    "lint:fix": "eslint . --fix"
+  },
   "devDependencies": {
     "@types/eslint": "^8.4.5",
     "@typescript-eslint/eslint-plugin": "^5.30.5",
