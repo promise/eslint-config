@@ -2,9 +2,9 @@
 /** @type{ import("eslint").Linter.BaseConfig } */
 const config = {
   parserOptions: {
-    ecmaFeatures: {
-      jsx: true,
-    },
+    ecmaFeatures: { jsx: true },
+    sourceType: "module",
+    ecmaVersion: "latest",
   },
   plugins: ["react"],
 
