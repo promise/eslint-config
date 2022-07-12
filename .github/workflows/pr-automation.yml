@@ -1,4 +1,3 @@
-# https://docs.github.com/en/code-security/supply-chain-security/keeping-your-dependencies-updated-automatically/automating-dependabot-with-github-actions#enable-auto-merge-on-a-pull-request
 name: PR Automation
 on: pull_request_target
 
@@ -10,21 +9,14 @@ jobs:
     if: ${{ github.actor == 'dependabot[bot]' }}
 
     steps:
-      - name: Get Dependabot metadata
-        uses: dependabot/fetch-metadata@v1.1.1
-        id: metadata
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Approve patches automatically
-        run: gh pr review --approve "$PR_URL"
-        if: ${{ steps.metadata.outputs.update-type == 'version-update:semver-patch' }}
-        env:
-          PR_URL: ${{ github.event.pull_request.html_url }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Enable auto-merge for Dependabot PRs
-        run: gh pr merge --auto --squash "$PR_URL"
-        env:
-          PR_URL: ${{ github.event.pull_request.html_url }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - name: Command Dependabot to merge after CI passes
+      uses: actions/github-script@v5
+      with:
+        github-token: ${{ secrets.PAT_TOKEN }}
+        script: |
+          github.rest.issues.createComment({
+            issue_number: context.issue.number,
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            body: '@dependabot squash and merge'
+          })
