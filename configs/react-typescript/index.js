@@ -2,8 +2,14 @@
 /** @type{ import("eslint").Linter.BaseConfig } */
 module.exports = {
   parser: "@typescript-eslint/parser",
-  parserOptions: require("../react-javascript").parserOptions,
-  plugins: [...require("../react-javascript").plugins, "@typescript-eslint"],
+  parserOptions: {
+    ...require("../typescript").parserOptions,
+    ...require("../react-javascript").parserOptions,
+  },
+  plugins: [
+    ...require("../react-javascript").plugins,
+    "@typescript-eslint",
+  ],
 
   // https://typescript-eslint.io/rules/
   rules: {
