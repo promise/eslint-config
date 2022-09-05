@@ -10,15 +10,15 @@
   },
   "devDependencies": {
     "@types/eslint": "8.4.6",
-    "@typescript-eslint/eslint-plugin": "5.36.1",
-    "@typescript-eslint/parser": "5.36.1",
+    "@typescript-eslint/eslint-plugin": "5.36.2",
+    "@typescript-eslint/parser": "5.36.2",
     "eslint": "8.23.0",
-    "eslint-plugin-react": "7.31.6"
+    "eslint-plugin-react": "7.31.7"
   },
   "peerDependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.36.1",
-    "@typescript-eslint/parser": "^5.36.1",
+    "@typescript-eslint/eslint-plugin": "^5.36.2",
+    "@typescript-eslint/parser": "^5.36.2",
     "eslint": "^8.23.0",
-    "eslint-plugin-react": "^7.31.6"
+    "eslint-plugin-react": "^7.31.7"
   }
 }
