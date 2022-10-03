@@ -1,10 +1,12 @@
 // https://eslint.org/docs/rules/#layout-formatting
 
+/* eslint sort-keys: ["error", "asc"] -- More readable for long list */
+
 // @ts-check
 /** @type{ import("eslint").Linter.RulesRecord } */
 const rules = {
   "array-bracket-newline": ["error"],
-  "array-bracket-spacing": ["error", "never", { singleValue: false, objectsInArrays: false, arraysInArrays: false }],
+  "array-bracket-spacing": ["error", "never", { arraysInArrays: false, objectsInArrays: false, singleValue: false }],
   "array-element-newline": ["error", "consistent", { multiline: true }],
   "arrow-parens": ["error", "as-needed"],
   "arrow-spacing": ["error"],
@@ -27,7 +29,7 @@ const rules = {
   "keyword-spacing": ["error"],
   "line-comment-position": ["error"],
   "linebreak-style": ["error", "windows"],
-  "lines-around-comment": ["error", { beforeBlockComment: true, allowBlockStart: true, allowClassStart: true, allowObjectStart: true, allowArrayStart: true }],
+  "lines-around-comment": ["error", { allowArrayStart: true, allowBlockStart: true, allowClassStart: true, allowObjectStart: true, beforeBlockComment: true }],
   "lines-between-class-members": ["off"],
   "max-len": ["off"],
   "max-statements-per-line": ["error"],
@@ -42,8 +44,8 @@ const rules = {
   "no-trailing-spaces": ["error"],
   "no-whitespace-before-property": ["error"],
   "nonblock-statement-body-position": ["error"],
-  "object-curly-newline": ["error", { multiline: true, consistent: true }],
-  "object-curly-spacing": ["error", "always", { objectsInObjects: false, arraysInObjects: false }],
+  "object-curly-newline": ["error", { consistent: true, multiline: true }],
+  "object-curly-spacing": ["error", "always", { arraysInObjects: false, objectsInObjects: false }],
   "object-property-newline": ["error", { allowAllPropertiesOnSameLine: true }],
   "operator-linebreak": ["error", "after"],
   "padded-blocks": ["off"],
@@ -54,10 +56,10 @@ const rules = {
   "semi-spacing": ["error"],
   "semi-style": ["error"],
   "space-before-blocks": ["error"],
-  "space-before-function-paren": ["error", { anonymous: "always", named: "never", asyncArrow: "always" }],
+  "space-before-function-paren": ["error", { anonymous: "always", asyncArrow: "always", named: "never" }],
   "space-in-parens": ["error"],
   "space-infix-ops": ["error"],
-  "space-unary-ops": ["error", { words: true, nonwords: false }],
+  "space-unary-ops": ["error", { nonwords: false, words: true }],
   "switch-colon-spacing": ["error"],
   "template-curly-spacing": ["error"],
   "template-tag-spacing": ["error"],

@@ -1,5 +1,7 @@
 // https://typescript-eslint.io/rules/#supported-rules
 
+/* eslint sort-keys: ["error", "asc"] -- More readable for long list */
+
 // @ts-check
 /** @type{ import("eslint").Linter.RulesRecord } */
 const rules = {
@@ -10,6 +12,7 @@ const rules = {
   "@typescript-eslint/ban-tslint-comment": ["error"],
   "@typescript-eslint/ban-types": ["error"],
   "@typescript-eslint/class-literal-property-style": ["error", "fields"],
+  "@typescript-eslint/consistent-generic-constructors": ["error"],
   "@typescript-eslint/consistent-indexed-object-style": ["error"],
   "@typescript-eslint/consistent-type-assertions": ["error"],
   "@typescript-eslint/consistent-type-definitions": ["error", "interface"],
@@ -25,6 +28,7 @@ const rules = {
   "@typescript-eslint/no-base-to-string": ["error"],
   "@typescript-eslint/no-confusing-non-null-assertion": ["error"],
   "@typescript-eslint/no-confusing-void-expression": ["off"],
+  "@typescript-eslint/no-duplicate-enum-values": ["error"],
   "@typescript-eslint/no-dynamic-delete": ["error"],
   "@typescript-eslint/no-empty-interface": ["warn"],
   "@typescript-eslint/no-explicit-any": ["warn"],
@@ -41,7 +45,6 @@ const rules = {
   "@typescript-eslint/no-non-null-asserted-nullish-coalescing": ["error"],
   "@typescript-eslint/no-non-null-asserted-optional-chain": ["error"],
   "@typescript-eslint/no-non-null-assertion": ["off"],
-  "@typescript-eslint/no-parameter-properties": ["error"],
   "@typescript-eslint/no-redundant-type-constituents": ["error"],
   "@typescript-eslint/no-require-imports": ["error"],
   "@typescript-eslint/no-this-alias": ["error"],
@@ -60,6 +63,7 @@ const rules = {
   "@typescript-eslint/no-useless-empty-export": ["error"],
   "@typescript-eslint/no-var-requires": ["error"],
   "@typescript-eslint/non-nullable-type-assertion-style": ["error"],
+  "@typescript-eslint/parameter-properties": ["error"],
   "@typescript-eslint/prefer-as-const": ["error"],
   "@typescript-eslint/prefer-enum-initializers": ["off"],
   "@typescript-eslint/prefer-for-of": ["error"],

@@ -1,5 +1,7 @@
 // https://eslint.org/docs/rules/#possible-problems
 
+/* eslint sort-keys: ["error", "asc"] -- More readable for long list */
+
 // @ts-check
 /** @type{ import("eslint").Linter.RulesRecord } */
 const rules = {
@@ -13,6 +15,7 @@ const rules = {
   "no-compare-neg-zero": ["error"],
   "no-cond-assign": ["error", "always"],
   "no-const-assign": ["error"],
+  "no-constant-binary-expression": ["error"],
   "no-constant-condition": ["error"],
   "no-constructor-return": ["error"],
   "no-control-regex": ["error"],
@@ -31,7 +34,7 @@ const rules = {
   "no-import-assign": ["error"],
   "no-inner-declarations": ["error", "both"],
   "no-invalid-regexp": ["error"],
-  "no-irregular-whitespace": ["error", { skipStrings: true, skipRegExps: true, skipTemplates: true }],
+  "no-irregular-whitespace": ["error", { skipRegExps: true, skipStrings: true, skipTemplates: true }],
   "no-loss-of-precision": ["error"],
   "no-misleading-character-class": ["error"],
   "no-new-symbol": ["error"],

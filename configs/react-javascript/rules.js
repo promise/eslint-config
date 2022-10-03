@@ -1,5 +1,7 @@
 // https://github.com/jsx-eslint/eslint-plugin-react#list-of-supported-rules
 
+/* eslint sort-keys: ["error", "asc"] -- More readable for long list */
+
 // @ts-check
 /** @type{ import("eslint").Linter.RulesRecord } */
 const rules = {

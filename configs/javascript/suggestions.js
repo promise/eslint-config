@@ -1,5 +1,7 @@
 // https://eslint.org/docs/rules/#suggestions
 
+/* eslint sort-keys: ["error", "asc"] -- More readable for long list */
+
 // @ts-check
 /** @type{ import("eslint").Linter.RulesRecord } */
 const rules = {
@@ -27,6 +29,7 @@ const rules = {
   "id-length": ["warn", { exceptions: ["a", "b", "i", "_"]}],
   "id-match": ["off"],
   "init-declarations": ["error"],
+  "logical-assignment-operators": ["error", "always"],
   "max-classes-per-file": ["warn"],
   "max-depth": ["off"],
   "max-lines": ["off"],

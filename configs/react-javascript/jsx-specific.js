@@ -1,5 +1,7 @@
 // https://github.com/jsx-eslint/eslint-plugin-react#jsx-specific-rules
 
+/* eslint sort-keys: ["error", "asc"] -- More readable for long list */
+
 // @ts-check
 /** @type{ import("eslint").Linter.RulesRecord } */
 const rules = {
@@ -37,7 +39,6 @@ const rules = {
   "react/jsx-props-no-spreading": ["off"],
   "react/jsx-sort-default-props": ["off"],
   "react/jsx-sort-props": ["off"],
-  "react/jsx-space-before-closing": ["off"],
   "react/jsx-tag-spacing": ["off"],
   "react/jsx-uses-react": ["error"],
   "react/jsx-uses-vars": ["error"],

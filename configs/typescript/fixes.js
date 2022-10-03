@@ -1,5 +1,7 @@
 // https://typescript-eslint.io/rules/#extension-rules
 
+/* eslint sort-keys: ["error", "asc"] -- More readable for long list */
+
 const jsRules = require("../javascript").rules;
 
 // @ts-check
@@ -17,7 +19,6 @@ const rules = {
   "@typescript-eslint/lines-between-class-members": jsRules["lines-between-class-members"],
   "@typescript-eslint/no-array-constructor": jsRules["no-array-constructor"],
   "@typescript-eslint/no-dupe-class-members": jsRules["no-dupe-class-members"],
-  "@typescript-eslint/no-duplicate-imports": jsRules["no-duplicate-imports"],
   "@typescript-eslint/no-empty-function": jsRules["no-empty-function"],
   "@typescript-eslint/no-extra-parens": jsRules["no-extra-parens"],
   "@typescript-eslint/no-extra-semi": jsRules["no-extra-semi"],
@@ -67,6 +68,7 @@ const rules = {
   "no-magic-numbers": ["off"],
   "no-redeclare": ["off"],
   "no-restricted-imports": ["off"],
+  "no-return-await": ["off"],
   "no-shadow": ["off"],
   "no-throw-literal": ["off"],
   "no-unused-expressions": ["off"],
@@ -77,7 +79,6 @@ const rules = {
   "padding-line-between-statements": ["off"],
   "quotes": ["off"],
   "require-await": ["off"],
-  "no-return-await": ["off"],
   "semi": ["off"],
   "space-before-blocks": ["off"],
   "space-before-function-paren": ["off"],
