@@ -34,14 +34,14 @@ jobs:
       if: steps.cache-packages.outputs.cache-hit != 'true'
 
     - name: Run test
-      uses: mathiasvr/command-output@v1
+      uses: mathiasvr/command-output@8dbf451add3db114df0114aa5e21a1efef8c5015 # v1
       id: test
       with:
         run: npm run --silent test
 
     - name: Find issue comment
       if: github.event_name == 'pull_request'
-      uses: peter-evans/find-comment@v2
+      uses: peter-evans/find-comment@b657a70ff16d17651703a84bee1cb9ad9d2be2ea # v2
       id: comment
       with:
         issue-number: ${{ github.event.pull_request.number }}
@@ -50,7 +50,7 @@ jobs:
 
     - name: Create or update comment
       if: github.event_name == 'pull_request'
-      uses: peter-evans/create-or-update-comment@v2
+      uses: peter-evans/create-or-update-comment@5adcb0bb0f9fb3f95ef05400558bdb3f329ee808 # v2
       with:
         comment-id: ${{ steps.comment.outputs.comment-id }}
         issue-number: ${{ github.event.pull_request.number }}
