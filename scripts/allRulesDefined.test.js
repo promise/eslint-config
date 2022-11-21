@@ -20,6 +20,7 @@ for (const override of overrides) {
   const addedRules = nonDeprecatedRules.filter(rule => !definedRules.includes(rule));
   const removedRules = definedRules.filter(rule => !nonDeprecatedRules.includes(rule));
 
+  let response = "";
   if (addedRules.length) response += `# New rules\n\n\`\`\`diff\n${addedRules.map(rule => `+ ${rule}`).join("\n")}\`\`\`\n\n`;
   if (removedRules.length) response += `# Removed rules\n\n\`\`\`diff\n${removedRules.map(rule => `- ${rule}`).join("\n")}\`\`\`\n\n`;
 
