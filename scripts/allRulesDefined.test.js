@@ -2,6 +2,9 @@
 const { overrides } = require("..");
 const builtInRules = Object.fromEntries(require("../node_modules/eslint/lib/rules").entries());
 
+const addedRules = [];
+const removedRules = [];
+
 for (const override of overrides) {
   const plugins = override.plugins || [];
   const definedRules = Object.keys(override.rules || {}).sort();
@@ -17,16 +20,16 @@ for (const override of overrides) {
     .map(([name]) => name)
     .sort();
 
-  const addedRules = nonDeprecatedRules.filter(rule => !definedRules.includes(rule));
-  const removedRules = definedRules.filter(rule => !nonDeprecatedRules.includes(rule));
-
-  let response = "";
-  if (addedRules.length) response += `# New rules\n\n\`\`\`diff\n${addedRules.map(rule => `+ ${rule}`).join("\n")}\`\`\`\n\n`;
-  if (removedRules.length) response += `# Removed rules\n\n\`\`\`diff\n${removedRules.map(rule => `- ${rule}`).join("\n")}\`\`\`\n\n`;
-
-  console.log(response || "All rules are defined.");
-  if (response) process.exit(1);
+  addedRules.push(...nonDeprecatedRules.filter(rule => !definedRules.includes(rule)));
+  removedRules.push(...definedRules.filter(rule => !nonDeprecatedRules.includes(rule)));
 }
+
+let response = "";
+if (addedRules.length) response += `# New rules\n\n\`\`\`diff\n${addedRules.map(rule => `+ ${rule}`).join("\n")}\`\`\`\n\n`;
+if (removedRules.length) response += `# Removed rules\n\n\`\`\`diff\n${removedRules.map(rule => `- ${rule}`).join("\n")}\`\`\`\n\n`;
+
+console.log(response || "All rules are defined.");
+if (response) process.exit(1);
 
 function findPlugin(pluginName) {
   const methods = [
