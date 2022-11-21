@@ -34,4 +34,27 @@ jobs:
       if: steps.cache-packages.outputs.cache-hit != 'true'
 
     - name: Run test
-      run: npm run test
+      uses: mathiasvr/command-output@v1
+      id: test
+      with:
+        run: npm run --silent test
+
+    - name: Find issue comment
+      if: ${{ always() }}
+      uses: peter-evans/find-comment@v2
+      id: comment
+      with:
+        issue-number: ${{ github.event.pull_request.number }}
+        comment-author: 'github-actions[bot]'
+        body-includes: "<!-- testing workflow output -->"
+
+    - name: Create or update comment
+      if: ${{ always() }}
+      uses: peter-evans/create-or-update-comment@v2
+      with:
+        comment-id: ${{ steps.comment.outputs.comment-id }}
+        issue-number: ${{ github.event.pull_request.number }}
+        body: |
+          <!-- testing workflow output -->
+          ${{ steps.test.outputs.stdout }}
+        edit-mode: replace
