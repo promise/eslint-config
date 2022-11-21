@@ -40,7 +40,7 @@ jobs:
         run: npm run --silent test
 
     - name: Find issue comment
-      if: github.event_name == 'pull_request'
+      if: ${{ always() && github.event_name == 'pull_request' }}
       uses: peter-evans/find-comment@b657a70ff16d17651703a84bee1cb9ad9d2be2ea # v2
       id: comment
       with:
@@ -49,7 +49,7 @@ jobs:
         body-includes: "<!-- testing workflow output -->"
 
     - name: Create or update comment
-      if: github.event_name == 'pull_request'
+      if: ${{ always() && github.event_name == 'pull_request' }}
       uses: peter-evans/create-or-update-comment@5adcb0bb0f9fb3f95ef05400558bdb3f329ee808 # v2
       with:
         comment-id: ${{ steps.comment.outputs.comment-id }}
