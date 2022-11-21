@@ -22,8 +22,8 @@ for (const override of overrides) {
   const addedRules = nonDeprecatedRules.filter(rule => !definedRules.includes(rule));
   const removedRules = definedRules.filter(rule => !nonDeprecatedRules.includes(rule));
   if (addedRules.length || removedRules.length) response += `# Override ${overrides.indexOf(override)} [${override.files.join(", ")}]\n\n`;
-  if (addedRules.length) response += `## New rules\n\n\`\`\`diff\n${addedRules.map(rule => `+ ${rule}`).join("\n")}\`\`\`\n\n`;
-  if (removedRules.length) response += `## Deprecated rules\n\n\`\`\`diff\n${removedRules.map(rule => `+ ${rule}`).join("\n")}\`\`\`\n\n`;
+  if (addedRules.length) response += `## New rules\n\n\`\`\`diff\n${addedRules.map(rule => `+ ${rule}`).join("\n")}\n\`\`\`\n\n`;
+  if (removedRules.length) response += `## Deprecated rules\n\n\`\`\`diff\n${removedRules.map(rule => `+ ${rule}`).join("\n")}\n\`\`\`\n\n`;
 }
 
 console.log(response || "All rules are defined.");
