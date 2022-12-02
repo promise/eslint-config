@@ -1,21 +1,15 @@
 // @ts-check
 /** @type{ import("eslint").Linter.BaseConfig } */
 const config = {
-  parserOptions: {
-    ecmaFeatures: { jsx: true },
-    sourceType: "module",
-    ecmaVersion: "latest",
-  },
   plugins: [
     ...require("../javascript").plugins ?? [],
-    "react",
+    "jest",
   ],
 
-  // https://github.com/jsx-eslint/eslint-plugin-react#list-of-supported-rules
+  // https://github.com/jest-community/eslint-plugin-jest#rules
   rules: {
     ...require("../javascript").rules,
     ...require("./rules"),
-    ...require("./jsx-specific"),
   },
 };
 
