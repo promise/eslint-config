@@ -7,8 +7,8 @@
 const rules = {
   "jest/consistent-test-it": ["error"],
   "jest/expect-expect": ["error"],
-  "jest/max-expects": ["warn"],
-  "jest/max-nested-describe": ["warn"],
+  "jest/max-expects": ["off"],
+  "jest/max-nested-describe": ["off"],
   "jest/no-alias-methods": ["error"],
   "jest/no-commented-out-tests": ["warn"],
   "jest/no-conditional-expect": ["off"],
