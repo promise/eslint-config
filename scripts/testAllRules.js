@@ -1,5 +1,5 @@
 /* eslint-disable no-console */
-const { overrides } = require("..");
+const { overrides } = require("../");
 const builtInRules = Object.fromEntries(require("../node_modules/eslint/lib/rules").entries());
 
 let response = "";
@@ -37,7 +37,7 @@ function findPlugin(pluginName) {
 
   for (const name of methods) {
     try {
-      return require(name(pluginName));
+      return require(`../node_modules/${name(pluginName)}`);
     } catch (err) {
       /* no plugin with name, try next one */
     }

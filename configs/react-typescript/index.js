@@ -7,14 +7,14 @@ module.exports = {
     ...require("../react-javascript").parserOptions,
   },
   plugins: [
-    ...require("../react-javascript").plugins,
-    "@typescript-eslint",
+    ...require("../typescript").plugins ?? [],
+    ...require("../react-javascript").plugins ?? [],
   ],
 
   // https://typescript-eslint.io/rules/
   rules: {
+    ...require("../typescript").rules,
     ...require("../react-javascript/rules"),
     ...require("../react-javascript/jsx-specific"),
-    ...require("../typescript").rules,
   },
 };
