@@ -15,7 +15,7 @@
     "@types/node": "18.11.16",
     "@typescript-eslint/eslint-plugin": "5.46.1",
     "@typescript-eslint/parser": "5.46.1",
-    "eslint": "8.29.0",
+    "eslint": "8.30.0",
     "eslint-plugin-jest": "27.1.7",
     "eslint-plugin-react": "7.31.11",
     "typescript": "4.9.4"
@@ -23,7 +23,7 @@
   "peerDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.46.1",
     "@typescript-eslint/parser": "^5.46.1",
-    "eslint": "^8.29.0",
+    "eslint": "^8.30.0",
     "eslint-plugin-jest": "27.1.7",
     "eslint-plugin-react": "^7.31.11"
   }
