@@ -3,11 +3,13 @@ _extends: .github
 repository:
   name: eslint-config
   description: "A collection of strict ESLint configurations"
+  private: false
+  is_template: true
 
 branches:
   - name: main
     protection:
       required_status_checks:
-        contexts:
-          - "Test rules"
-          - "ESLint"
+        checks:
+          - context: Test rules
+          - context: ESLint
