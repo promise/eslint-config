@@ -1,0 +1,13 @@
+_extends: .github
+
+repository:
+  name: eslint-config
+  description: "A collection of strict ESLint configurations"
+
+branches:
+  - name: main
+    protection:
+      required_status_checks:
+        contexts:
+          - "Test rules"
+          - "ESLint"
