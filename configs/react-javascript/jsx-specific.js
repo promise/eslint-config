@@ -37,7 +37,6 @@ const rules = {
   "react/jsx-pascal-case": ["off"],
   "react/jsx-props-no-multi-spaces": ["off"],
   "react/jsx-props-no-spreading": ["off"],
-  "react/jsx-sort-default-props": ["off"],
   "react/jsx-sort-props": ["off"],
   "react/jsx-tag-spacing": ["off"],
   "react/jsx-uses-react": ["error"],
