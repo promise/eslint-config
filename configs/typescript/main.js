@@ -36,6 +36,7 @@ const rules = {
   "@typescript-eslint/no-extraneous-class": ["error"],
   "@typescript-eslint/no-floating-promises": ["error"],
   "@typescript-eslint/no-for-in-array": ["off"],
+  "@typescript-eslint/no-import-type-side-effects": ["error"],
   "@typescript-eslint/no-inferrable-types": ["error"],
   "@typescript-eslint/no-invalid-void-type": ["error"],
   "@typescript-eslint/no-meaningless-void-operator": ["error"],
