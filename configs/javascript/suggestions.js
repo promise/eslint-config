@@ -144,7 +144,7 @@ const rules = {
   "require-await": ["error"],
   "require-unicode-regexp": ["warn"],
   "require-yield": ["error"],
-  "sort-imports": ["error"],
+  "sort-imports": ["off"],
   "sort-keys": ["off"],
   "sort-vars": ["off"],
   "spaced-comment": ["error"],
