@@ -7,7 +7,10 @@ module.exports = {
     ecmaVersion: "latest",
     project: "tsconfig.json",
   },
-  plugins: ["@typescript-eslint"],
+  plugins: [
+    ...require("../javascript").plugins ?? [],
+    "@typescript-eslint",
+  ],
 
   // https://typescript-eslint.io/rules/
   rules: {

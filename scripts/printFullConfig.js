@@ -1,5 +1,5 @@
 /* eslint-disable no-console */
-const config = require("../");
 const { inspect } = require("util");
+const config = require("../");
 
 console.log(inspect(config, { depth: Infinity }));

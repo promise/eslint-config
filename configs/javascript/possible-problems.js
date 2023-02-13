@@ -25,7 +25,7 @@ const rules = {
   "no-dupe-else-if": ["error"],
   "no-dupe-keys": ["error"],
   "no-duplicate-case": ["error"],
-  "no-duplicate-imports": ["error", { includeExports: true }],
+  "no-duplicate-imports": ["off"],
   "no-empty-character-class": ["error"],
   "no-empty-pattern": ["error"],
   "no-ex-assign": ["error"],
