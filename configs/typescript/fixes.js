@@ -10,6 +10,7 @@ const rules = {};
 
 const ruleFixes = [
   "brace-style",
+  "block-spacing",
   "comma-dangle",
   "comma-spacing",
   "default-param-last",
