@@ -12,7 +12,7 @@ const rules = {
   "import/no-mutable-exports": ["error"],
   "import/no-named-as-default": ["warn"],
   "import/no-named-as-default-member": ["error"],
-  "import/no-unused-modules": ["warn", { unusedExports: true }],
+  "import/no-unused-modules": ["off"],
 };
 
 module.exports = rules;
