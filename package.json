@@ -11,7 +11,7 @@
     "test": "node scripts/testAllRules.js"
   },
   "devDependencies": {
-    "@types/eslint": "8.21.0",
+    "@types/eslint": "8.21.1",
     "@types/node": "18.13.0",
     "@typescript-eslint/eslint-plugin": "5.52.0",
     "@typescript-eslint/parser": "5.52.0",
