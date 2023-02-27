@@ -45,7 +45,7 @@ const rules = {
   "no-whitespace-before-property": ["error"],
   "nonblock-statement-body-position": ["error"],
   "object-curly-newline": ["error", { consistent: true, multiline: true }],
-  "object-curly-spacing": ["error", "always", { arraysInObjects: false, objectsInObjects: false }],
+  "object-curly-spacing": ["error", "always"],
   "object-property-newline": ["error", { allowAllPropertiesOnSameLine: true }],
   "operator-linebreak": ["error", "after"],
   "padded-blocks": ["off"],
