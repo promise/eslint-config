@@ -26,7 +26,7 @@ const rules = {
   "grouped-accessor-pairs": ["error", "getBeforeSet"],
   "guard-for-in": ["off"],
   "id-denylist": ["off"],
-  "id-length": ["warn", { exceptions: ["a", "b", "i", "_"]}],
+  "id-length": ["warn", { exceptions: ["a", "b", "i", "_"] }],
   "id-match": ["off"],
   "init-declarations": ["error"],
   "logical-assignment-operators": ["error", "always"],
