@@ -36,7 +36,7 @@ jobs:
           echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_OUTPUT
 
     - name: Set up module cache
-      uses: actions/cache@6998d139ddd3e68c71e9e398d8e40b71a2f39812 # v3
+      uses: actions/cache@69d9d449aced6a2ede0bc19182fadc3a0a42d2b0 # v3
       id: cache-packages
       with:
         path: ${{ steps.pnpm-cache.outputs.STORE_PATH }}
@@ -55,7 +55,7 @@ jobs:
 
     - name: Find issue comment
       if: ${{ always() && github.event_name == 'pull_request' }}
-      uses: peter-evans/find-comment@85a676a52594b4481e0532825a2d8906ef96dac2 # v2
+      uses: peter-evans/find-comment@034abe94d3191f9c89d870519735beae326f2bdb # v2
       id: comment
       with:
         issue-number: ${{ github.event.pull_request.number }}
