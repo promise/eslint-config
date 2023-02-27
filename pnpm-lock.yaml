@@ -13,8 +13,8 @@ specifiers:
   typescript: 4.9.5
 
 devDependencies:
-  '@types/eslint': 8.21.0
   '@types/eslint': 8.21.1
+  '@types/node': 18.14.2
   '@typescript-eslint/eslint-plugin': 5.52.0_6cfvjsbua5ptj65675bqcn6oza
   '@typescript-eslint/parser': 5.52.0_7kw3g6rralp5ps6mg3uyzz6azm
   eslint: 8.34.0
