@@ -19,7 +19,7 @@ const rules = {
   "import/no-named-default": ["error"],
   "import/no-named-export": ["off"],
   "import/no-namespace": ["error"],
-  "import/no-unassigned-import": ["error"],
+  "import/no-unassigned-import": ["off"],
   "import/order": ["error", { "alphabetize": { caseInsensitive: true, order: "asc", orderImportKind: "asc" }, "newlines-between": "never", "warnOnUnassignedImports": true }],
   "import/prefer-default-export": ["warn"],
 };
