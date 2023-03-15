@@ -20,6 +20,7 @@ const ruleFixes = [
   "init-declarations",
   "key-spacing",
   "keyword-spacing",
+  "lines-around-comment",
   "lines-between-class-members",
   "no-array-constructor",
   "no-dupe-class-members",
