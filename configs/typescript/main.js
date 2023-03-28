@@ -29,6 +29,7 @@ const rules = {
   "@typescript-eslint/no-confusing-non-null-assertion": ["error"],
   "@typescript-eslint/no-confusing-void-expression": ["off"],
   "@typescript-eslint/no-duplicate-enum-values": ["error"],
+  "@typescript-eslint/no-duplicate-type-constituents": ["error"],
   "@typescript-eslint/no-dynamic-delete": ["error"],
   "@typescript-eslint/no-empty-interface": ["warn"],
   "@typescript-eslint/no-explicit-any": ["warn"],
