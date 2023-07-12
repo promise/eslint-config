@@ -5,20 +5,20 @@
 // @ts-check
 /** @type{ import("eslint").Linter.RulesRecord } */
 const rules = {
-  "import/default": ["error"],
-  "import/named": ["error"],
-  "import/namespace": ["error"],
-  "import/no-absolute-path": ["error"],
-  "import/no-cycle": ["warn"],
-  "import/no-dynamic-require": ["off"],
-  "import/no-internal-modules": ["off"],
-  "import/no-relative-packages": ["error"],
-  "import/no-relative-parent-imports": ["off"],
-  "import/no-restricted-paths": ["off"],
-  "import/no-self-import": ["error"],
-  "import/no-unresolved": ["off"],
-  "import/no-useless-path-segments": ["error"],
-  "import/no-webpack-loader-syntax": ["error"],
+  "i/default": ["error"],
+  "i/named": ["error"],
+  "i/namespace": ["error"],
+  "i/no-absolute-path": ["error"],
+  "i/no-cycle": ["warn"],
+  "i/no-dynamic-require": ["off"],
+  "i/no-internal-modules": ["off"],
+  "i/no-relative-packages": ["error"],
+  "i/no-relative-parent-imports": ["off"],
+  "i/no-restricted-paths": ["off"],
+  "i/no-self-import": ["error"],
+  "i/no-unresolved": ["off"],
+  "i/no-useless-path-segments": ["error"],
+  "i/no-webpack-loader-syntax": ["error"],
 };
 
 module.exports = rules;

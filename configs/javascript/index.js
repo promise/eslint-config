@@ -1,7 +1,7 @@
 // @ts-check
 /** @type{ import("eslint").Linter.BaseConfig } */
 const config = {
-  plugins: ["import"],
+  plugins: ["i"],
 
   // https://eslint.org/docs/rules/
   rules: {
