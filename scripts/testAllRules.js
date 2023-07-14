@@ -33,6 +33,7 @@ function findPlugin(pluginName) {
   const methods = [
     name => `eslint-plugin-${name}`,
     name => `${name}/eslint-plugin`,
+    name => `${name}/eslint-plugin/dist`,
   ];
 
   for (const name of methods) {
@@ -43,7 +44,7 @@ function findPlugin(pluginName) {
     }
   }
 
-  return new Error("plugin not found");
+  throw new Error("plugin not found");
 }
 
 function getRules(rules) {
