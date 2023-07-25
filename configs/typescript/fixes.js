@@ -11,6 +11,7 @@ const rules = {};
 const ruleFixes = [
   "brace-style",
   "block-spacing",
+  "class-methods-use-this",
   "comma-dangle",
   "comma-spacing",
   "default-param-last",
