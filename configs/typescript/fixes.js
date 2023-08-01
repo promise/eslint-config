@@ -6,7 +6,9 @@ const jsRules = require("../javascript").rules;
 
 // @ts-check
 /** @type{ import("eslint").Linter.RulesRecord } */
-const rules = {};
+const rules = {
+  "@typescript-eslint/return-await": ["error"],
+};
 
 const ruleFixes = [
   "brace-style",
@@ -35,7 +37,6 @@ const ruleFixes = [
   "no-magic-numbers",
   "no-redeclare",
   "no-restricted-imports",
-  "no-return-await",
   "no-shadow",
   "no-throw-literal",
   "no-unused-expressions",
@@ -53,15 +54,8 @@ const ruleFixes = [
 ];
 
 ruleFixes.forEach(rule => {
-  switch (rule) {
-  case "no-return-await":
-    rules["@typescript-eslint/return-await"] = jsRules[rule];
-    rules[rule] = ["off"];
-    break;
-  default:
-    rules[`@typescript-eslint/${rule}`] = jsRules[rule];
-    rules[rule] = ["off"];
-  }
+  rules[`@typescript-eslint/${rule}`] = jsRules[rule];
+  rules[rule] = ["off"];
 });
 
 module.exports = rules;
