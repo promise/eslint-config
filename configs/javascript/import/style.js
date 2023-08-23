@@ -5,7 +5,7 @@
 // @ts-check
 /** @type{ import("eslint").Linter.RulesRecord } */
 const rules = {
-  "i/consistent-type-specifier-style": ["error"],
+  "i/consistent-type-specifier-style": ["off"],
   "i/dynamic-import-chunkname": ["off"],
   "i/exports-last": ["off"],
   "i/extensions": ["off"],
@@ -15,7 +15,7 @@ const rules = {
   "i/newline-after-import": ["error"],
   "i/no-anonymous-default-export": ["off"],
   "i/no-default-export": ["off"],
-  "i/no-duplicates": ["error", { "prefer-inline": true }],
+  "i/no-duplicates": ["error", { "prefer-inline": false }],
   "i/no-named-default": ["error"],
   "i/no-named-export": ["off"],
   "i/no-namespace": ["error"],
