@@ -9,6 +9,7 @@ const config = {
   plugins: [
     ...require("../javascript").plugins ?? [],
     "react",
+    "tailwindcss",
   ],
 
   // https://github.com/jsx-eslint/eslint-plugin-react#list-of-supported-rules
@@ -16,6 +17,7 @@ const config = {
     ...require("../javascript").rules,
     ...require("./rules"),
     ...require("./jsx-specific"),
+    ...require("./tailwind/rules"),
   },
 };
 

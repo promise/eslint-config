@@ -16,5 +16,6 @@ module.exports = {
     ...require("../typescript").rules,
     ...require("../react-javascript/rules"),
     ...require("../react-javascript/jsx-specific"),
+    ...require("../react-javascript/tailwind/rules"),
   },
 };
