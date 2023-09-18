@@ -13,6 +13,7 @@ const rules = {
   "jest/no-commented-out-tests": ["warn"],
   "jest/no-conditional-expect": ["off"],
   "jest/no-conditional-in-test": ["off"],
+  "jest/no-confusing-set-timeout": ["error"],
   "jest/no-deprecated-functions": ["error"],
   "jest/no-disabled-tests": ["warn"],
   "jest/no-done-callback": ["error"],
