@@ -10,14 +10,16 @@ const config = {
     ...require("../javascript").plugins ?? [],
     "react",
     "tailwindcss",
+    "@stylistic/jsx",
   ],
 
   // https://github.com/jsx-eslint/eslint-plugin-react#list-of-supported-rules
   rules: {
     ...require("../javascript").rules,
-    ...require("./rules"),
     ...require("./jsx-specific"),
-    ...require("./tailwind/rules"),
+    ...require("./rules"),
+    ...require("./stylistic"),
+    ...require("./tailwind"),
   },
 };
 

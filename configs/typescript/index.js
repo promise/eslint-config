@@ -10,6 +10,7 @@ module.exports = {
   plugins: [
     ...require("../javascript").plugins ?? [],
     "@typescript-eslint",
+    "@stylistic/ts",
   ],
 
   // https://typescript-eslint.io/rules/
@@ -17,5 +18,6 @@ module.exports = {
     ...require("../javascript").rules,
     ...require("./main"),
     ...require("./fixes"),
+    ...require("./stylistic"),
   },
 };
