@@ -14,8 +14,9 @@ module.exports = {
   // https://typescript-eslint.io/rules/
   rules: {
     ...require("../typescript").rules,
-    ...require("../react-javascript/rules"),
     ...require("../react-javascript/jsx-specific"),
-    ...require("../react-javascript/tailwind/rules"),
+    ...require("../react-javascript/rules"),
+    ...require("../react-javascript/stylistic"),
+    ...require("../react-javascript/tailwind"),
   },
 };

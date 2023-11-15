@@ -34,6 +34,7 @@ function findPlugin(pluginName) {
     name => `eslint-plugin-${name}`,
     name => `${name}/eslint-plugin`,
     name => `${name}/eslint-plugin/dist`,
+    name => name.replace(/\/([^/]+)$/u, "/eslint-plugin-$1"),
   ];
 
   for (const name of methods) {

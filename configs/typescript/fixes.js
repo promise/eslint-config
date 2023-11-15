@@ -6,9 +6,7 @@ const jsRules = require("../javascript").rules;
 
 // @ts-check
 /** @type{ import("eslint").Linter.RulesRecord } */
-const rules = {
-  "@typescript-eslint/return-await": ["error"],
-};
+const rules = {};
 
 const ruleFixes = [
   "brace-style",
@@ -19,12 +17,14 @@ const ruleFixes = [
   "default-param-last",
   "dot-notation",
   "func-call-spacing",
+  "function-call-spacing",
   "indent",
   "init-declarations",
   "key-spacing",
   "keyword-spacing",
   "lines-around-comment",
   "lines-between-class-members",
+  "max-params",
   "no-array-constructor",
   "no-dupe-class-members",
   "no-empty-function",
@@ -45,6 +45,7 @@ const ruleFixes = [
   "no-useless-constructor",
   "object-curly-spacing",
   "padding-line-between-statements",
+  "prefer-destructuring",
   "quotes",
   "require-await",
   "semi",
@@ -54,8 +55,14 @@ const ruleFixes = [
 ];
 
 ruleFixes.forEach(rule => {
-  rules[`@typescript-eslint/${rule}`] = jsRules[rule];
-  rules[rule] = ["off"];
+  if (jsRules[`@stylistic/js/${rule}`]) {
+    rules[`@stylistic/ts/${rule}`] = jsRules[`@stylistic/js/${rule}`];
+    rules[`@stylistic/js/${rule}`] = ["off"];
+    if (!["function-call-spacing", "object-curly-spacing"].includes(rule)) rules[`@typescript-eslint/${rule}`] = ["off"];
+  } else if (jsRules[rule]) {
+    rules[`@typescript-eslint/${rule}`] = jsRules[rule];
+    rules[rule] = ["off"];
+  }
 });
 
 module.exports = rules;
