@@ -6,11 +6,11 @@ settings:
 
 devDependencies:
   '@stylistic/eslint-plugin-js':
-    specifier: 1.4.0
-    version: 1.4.0
+    specifier: 1.4.1
+    version: 1.4.1(eslint@8.54.0)
   '@stylistic/eslint-plugin-jsx':
     specifier: 1.4.0
-    version: 1.4.0
+    version: 1.4.0(eslint@8.54.0)
   '@stylistic/eslint-plugin-ts':
     specifier: 1.4.0
     version: 1.4.0(eslint@8.54.0)(typescript@5.3.2)
@@ -175,11 +175,27 @@ packages:
       graphemer: 1.4.0
     dev: true
 
-  /@stylistic/eslint-plugin-jsx@1.4.0:
+  /@stylistic/eslint-plugin-js@1.4.1(eslint@8.54.0):
+    resolution: {integrity: sha512-WXHPEVw5PB7OML7cLwHJDEcCyLiP7vzKeBbSwmpHLK0oh0JYkoJfTg2hEdFuQT5rQxFy3KzCy9R1mZ0wgLjKrA==}
+    engines: {node: ^16.0.0 || >=18.0.0}
+    peerDependencies:
+      eslint: '>=8.40.0'
+    dependencies:
+      acorn: 8.11.2
+      escape-string-regexp: 4.0.0
+      eslint: 8.54.0
+      eslint-visitor-keys: 3.4.3
+      espree: 9.6.1
+      graphemer: 1.4.0
+    dev: true
+
+  /@stylistic/eslint-plugin-jsx@1.4.0(eslint@8.54.0):
     resolution: {integrity: sha512-MB5MW8HnRm0nAeUpgVzr4NOzLtxWYBIBtW9iDXopykl1ZJOm/0LlSFlsw9wsXd4Zqarkow6IrV18HcZ0Hc06yQ==}
     dependencies:
-      '@stylistic/eslint-plugin-js': 1.4.0
+      '@stylistic/eslint-plugin-js': 1.4.1(eslint@8.54.0)
       estraverse: 5.3.0
+    transitivePeerDependencies:
+      - eslint
     dev: true
 
   /@stylistic/eslint-plugin-ts@1.4.0(eslint@8.54.0)(typescript@5.3.2):
