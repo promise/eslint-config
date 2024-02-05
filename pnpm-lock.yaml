@@ -6,8 +6,8 @@ settings:
 
 devDependencies:
   '@stylistic/eslint-plugin-js':
-    specifier: 1.5.4
-    version: 1.5.4(eslint@8.56.0)
+    specifier: 1.6.0
+    version: 1.6.0(eslint@8.56.0)
   '@stylistic/eslint-plugin-jsx':
     specifier: 1.5.4
     version: 1.5.4(eslint@8.56.0)
@@ -197,13 +197,26 @@ packages:
       espree: 9.6.1
     dev: true
 
+  /@stylistic/eslint-plugin-js@1.6.0(eslint@8.56.0):
+    resolution: {integrity: sha512-qlBAu08fy4d5BEF+c31E5y0OvEOVZo3SfOOs2Qrb4/CwAaXrAch++axBWedzgR3n0XqkuXjr6dbexqrdOm92ag==}
+    engines: {node: ^16.0.0 || >=18.0.0}
+    peerDependencies:
+      eslint: '>=8.40.0'
+    dependencies:
+      acorn: 8.11.3
+      escape-string-regexp: 4.0.0
+      eslint: 8.56.0
+      eslint-visitor-keys: 3.4.3
+      espree: 10.0.0
+    dev: true
+
   /@stylistic/eslint-plugin-jsx@1.5.4(eslint@8.56.0):
     resolution: {integrity: sha512-JUfrpCkeBCqt1IZ4QsP4WgxGza4PhK4LPbc0VnCjHKygl+rgqoDAovqOuzFJ49wJ4Ix3r6OIHFuwiBGswZEVvg==}
     engines: {node: ^16.0.0 || >=18.0.0}
     peerDependencies:
       eslint: '>=8.40.0'
     dependencies:
-      '@stylistic/eslint-plugin-js': 1.5.4(eslint@8.56.0)
+      '@stylistic/eslint-plugin-js': 1.6.0(eslint@8.56.0)
       eslint: 8.56.0
       estraverse: 5.3.0
     dev: true
@@ -1116,6 +1129,15 @@ packages:
       text-table: 0.2.0
     transitivePeerDependencies:
       - supports-color
+    dev: true
+
+  /espree@10.0.0:
+    resolution: {integrity: sha512-gdlKrfXQWv/3vubKqeQIiBUoWeknNQVEDpKD7OD3bC53g5EKISTuhcIoA1H1e+zqIuosdKrKuTDMmj8eFfhOnA==}
+    engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
+    dependencies:
+      acorn: 8.11.3
+      acorn-jsx: 5.3.2(acorn@8.11.3)
+      eslint-visitor-keys: 3.4.3
     dev: true
 
   /espree@9.6.1:
