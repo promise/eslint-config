@@ -9,8 +9,8 @@ const jsRules = require("../javascript").rules;
 const rules = {};
 
 const ruleFixes = [
-  "brace-style",
   "block-spacing",
+  "brace-style",
   "class-methods-use-this",
   "comma-dangle",
   "comma-spacing",
@@ -46,6 +46,7 @@ const ruleFixes = [
   "object-curly-spacing",
   "padding-line-between-statements",
   "prefer-destructuring",
+  "prefer-promise-reject-errors",
   "quotes",
   "require-await",
   "semi",
@@ -54,11 +55,34 @@ const ruleFixes = [
   "space-infix-ops",
 ];
 
+const deprecatedTypescriptEslintRules = [
+  "block-spacing",
+  "brace-style",
+  "comma-dangle",
+  "comma-spacing",
+  "func-call-spacing",
+  "indent",
+  "key-spacing",
+  "keyword-spacing",
+  "lines-around-comment",
+  "lines-between-class-members",
+  "no-extra-parens",
+  "no-extra-semi",
+  "padding-line-between-statements",
+  "quotes",
+  "semi",
+  "space-before-blocks",
+  "space-before-function-paren",
+  "space-infix-ops",
+  "function-call-spacing",
+  "object-curly-spacing",
+];
+
 ruleFixes.forEach(rule => {
   if (jsRules[`@stylistic/js/${rule}`]) {
     rules[`@stylistic/ts/${rule}`] = jsRules[`@stylistic/js/${rule}`];
     rules[`@stylistic/js/${rule}`] = ["off"];
-    if (!["function-call-spacing", "object-curly-spacing"].includes(rule)) rules[`@typescript-eslint/${rule}`] = ["off"];
+    if (!deprecatedTypescriptEslintRules.includes(rule)) rules[`@typescript-eslint/${rule}`] = ["off"];
   } else if (jsRules[rule]) {
     rules[`@typescript-eslint/${rule}`] = jsRules[rule];
     rules[rule] = ["off"];
