@@ -18,6 +18,7 @@ const rules = {
   "@stylistic/jsx/jsx-max-props-per-line": ["off"],
   "@stylistic/jsx/jsx-newline": ["off"],
   "@stylistic/jsx/jsx-one-expression-per-line": ["off"],
+  "@stylistic/jsx/jsx-pascal-case": ["error"],
   "@stylistic/jsx/jsx-props-no-multi-spaces": ["error"],
   "@stylistic/jsx/jsx-self-closing-comp": ["error"],
   "@stylistic/jsx/jsx-sort-props": ["off"],
