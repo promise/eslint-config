@@ -15,8 +15,8 @@ devDependencies:
     specifier: 1.6.2
     version: 1.6.2(eslint@8.56.0)(typescript@5.3.3)
   '@types/eslint':
-    specifier: 8.56.2
-    version: 8.56.2
+    specifier: 8.56.3
+    version: 8.56.3
   '@types/node':
     specifier: 18.19.18
     version: 18.19.18
@@ -190,7 +190,7 @@ packages:
     peerDependencies:
       eslint: '>=8.40.0'
     dependencies:
-      '@types/eslint': 8.56.2
+      '@types/eslint': 8.56.3
       acorn: 8.11.3
       escape-string-regexp: 4.0.0
       eslint: 8.56.0
@@ -205,7 +205,7 @@ packages:
       eslint: '>=8.40.0'
     dependencies:
       '@stylistic/eslint-plugin-js': 1.6.2(eslint@8.56.0)
-      '@types/eslint': 8.56.2
+      '@types/eslint': 8.56.3
       eslint: 8.56.0
       estraverse: 5.3.0
       picomatch: 4.0.1
@@ -218,7 +218,7 @@ packages:
       eslint: '>=8.40.0'
     dependencies:
       '@stylistic/eslint-plugin-js': 1.6.2(eslint@8.56.0)
-      '@types/eslint': 8.56.2
+      '@types/eslint': 8.56.3
       '@typescript-eslint/utils': 6.21.0(eslint@8.56.0)(typescript@5.3.3)
       eslint: 8.56.0
     transitivePeerDependencies:
@@ -226,8 +226,8 @@ packages:
       - typescript
     dev: true
 
-  /@types/eslint@8.56.2:
-    resolution: {integrity: sha512-uQDwm1wFHmbBbCZCqAlq6Do9LYwByNZHWzXppSnay9SuwJ+VRbjkbLABer54kcPnMSlG6Fdiy2yaFXm/z9Z5gw==}
+  /@types/eslint@8.56.3:
+    resolution: {integrity: sha512-PvSf1wfv2wJpVIFUMSb+i4PvqNYkB9Rkp9ZDO3oaWzq4SKhsQk4mrMBr3ZH06I0hKrVGLBacmgl8JM4WVjb9dg==}
     dependencies:
       '@types/estree': 1.0.5
       '@types/json-schema': 7.0.15
