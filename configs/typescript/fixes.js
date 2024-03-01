@@ -14,6 +14,7 @@ const ruleFixes = [
   "class-methods-use-this",
   "comma-dangle",
   "comma-spacing",
+  "consistent-return",
   "default-param-last",
   "dot-notation",
   "func-call-spacing",
