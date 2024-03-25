@@ -7,6 +7,7 @@
 const rules = {
   "react/boolean-prop-naming": ["off"],
   "react/button-has-type": ["off"],
+  "react/checked-requires-onchange-or-readonly": ["off"],
   "react/default-props-match-prop-types": ["off"],
   "react/destructuring-assignment": ["off"],
   "react/display-name": ["error"],
