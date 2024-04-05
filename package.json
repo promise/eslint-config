@@ -16,7 +16,7 @@
     "@stylistic/eslint-plugin-jsx": "1.7.0",
     "@stylistic/eslint-plugin-ts": "1.7.0",
     "@types/eslint": "8.56.7",
-    "@types/node": "18.19.29",
+    "@types/node": "18.19.30",
     "@typescript-eslint/eslint-plugin": "7.5.0",
     "@typescript-eslint/parser": "7.5.0",
     "eslint": "8.57.0",
