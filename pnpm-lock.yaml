@@ -9,8 +9,8 @@ devDependencies:
     specifier: 1.7.2
     version: 1.7.2(eslint@8.57.0)
   '@stylistic/eslint-plugin-jsx':
-    specifier: 1.7.0
-    version: 1.7.0(eslint@8.57.0)
+    specifier: 1.7.2
+    version: 1.7.2(eslint@8.57.0)
   '@stylistic/eslint-plugin-ts':
     specifier: 1.7.0
     version: 1.7.0(eslint@8.57.0)(typescript@5.4.5)
@@ -212,8 +212,8 @@ packages:
       espree: 9.6.1
     dev: true
 
-  /@stylistic/eslint-plugin-jsx@1.7.0(eslint@8.57.0):
-    resolution: {integrity: sha512-BACdBwXakQvjYIST5N2WWhRbvhRsIxa/F59BiZol+0IH4FSmDXhie7v/yaxDIIA9CbfElzOmIA5nWNYTVXcnwQ==}
+  /@stylistic/eslint-plugin-jsx@1.7.2(eslint@8.57.0):
+    resolution: {integrity: sha512-lNZR5PR0HLJPs+kY0y8fy6KroKlYqA5PwsYWpVYWzqZWiL5jgAeUo4s9yLFYjJjzildJ5MsTVMy/xP81Qz6GXg==}
     engines: {node: ^16.0.0 || >=18.0.0}
     peerDependencies:
       eslint: '>=8.40.0'
