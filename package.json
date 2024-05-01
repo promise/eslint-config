@@ -13,7 +13,7 @@
   },
   "devDependencies": {
     "@stylistic/eslint-plugin-js": "1.8.0",
-    "@stylistic/eslint-plugin-jsx": "1.7.2",
+    "@stylistic/eslint-plugin-jsx": "1.8.0",
     "@stylistic/eslint-plugin-ts": "1.8.0",
     "@types/eslint": "8.56.10",
     "@types/node": "18.19.31",
@@ -28,7 +28,7 @@
   },
   "peerDependencies": {
     "@stylistic/eslint-plugin-js": "1.8.0",
-    "@stylistic/eslint-plugin-jsx": "1.7.2",
+    "@stylistic/eslint-plugin-jsx": "1.8.0",
     "@stylistic/eslint-plugin-ts": "1.8.0",
     "@typescript-eslint/eslint-plugin": "^7.8.0",
     "@typescript-eslint/parser": "^7.8.0",
