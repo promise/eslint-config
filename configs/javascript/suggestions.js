@@ -4,7 +4,7 @@
 
 // @ts-check
 /** @type{ import("eslint").Linter.RulesRecord } */
-const rules = {
+export default {
   "accessor-pairs": ["error"],
   "arrow-body-style": ["error"],
   "block-scoped-var": ["error"],
@@ -37,7 +37,6 @@ const rules = {
   "max-nested-callbacks": ["off"],
   "max-params": ["off"],
   "max-statements": ["off"],
-  "multiline-comment-style": ["error", "separate-lines"],
   "new-cap": ["error"],
   "no-alert": ["off"],
   "no-array-constructor": ["error"],
@@ -145,5 +144,3 @@ const rules = {
   "vars-on-top": ["error"],
   "yoda": ["error"],
 };
-
-module.exports = rules;

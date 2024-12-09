@@ -4,7 +4,7 @@
 
 // @ts-check
 /** @type{ import("eslint").Linter.RulesRecord } */
-const rules = {
+export default {
   "array-callback-return": ["error", { checkForEach: true }],
   "constructor-super": ["error"],
   "for-direction": ["error"],
@@ -38,7 +38,6 @@ const rules = {
   "no-loss-of-precision": ["error"],
   "no-misleading-character-class": ["error"],
   "no-new-native-nonconstructor": ["error"],
-  "no-new-symbol": ["error"],
   "no-obj-calls": ["error"],
   "no-promise-executor-return": ["error"],
   "no-prototype-builtins": ["error"],
@@ -59,10 +58,9 @@ const rules = {
   "no-unused-private-class-members": ["error"],
   "no-unused-vars": ["error"],
   "no-use-before-define": ["error", "nofunc"],
+  "no-useless-assignment": ["error"],
   "no-useless-backreference": ["error"],
   "require-atomic-updates": ["error", { allowProperties: true }],
   "use-isnan": ["error"],
   "valid-typeof": ["error", { requireStringLiterals: true }],
 };
-
-module.exports = rules;

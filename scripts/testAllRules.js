@@ -1,54 +1,34 @@
-/* eslint-disable no-console */
-const { overrides } = require("../");
-const builtInRules = Object.fromEntries(require("../node_modules/eslint/lib/rules").entries());
+import { builtinRules } from "eslint/use-at-your-own-risk";
+import { allConfigs } from "../configs/index.js";
 
 let response = "";
 
-for (const override of overrides) {
-  const plugins = override.plugins || [];
-  const definedRules = Object.keys(override.rules || {}).sort();
-  const allRules = { ...builtInRules };
+for (const [configName, config] of Object.entries(allConfigs)) {
+  const definedRules = Object.keys(config.rules || {}).sort();
 
-  plugins.forEach(plugin => {
-    const rules = getRules(findPlugin(plugin).rules);
-    for (const rule in rules) allRules[`${plugin}/${rule}`] = rules[rule];
-  });
+  const plugins = [
+    ["eslint", { rules: Object.fromEntries(builtinRules.entries()) }],
+    ...Object.entries(config.plugins || {}),
+  ];
+
+  const allRules = plugins.map(([pluginName, plugin]) => {
+    const rules = plugin.rules || {};
+    const pluginRules = rules.entries ? Object.fromEntries(rules.entries()) : rules;
+    return pluginName === "eslint" ? pluginRules : Object.fromEntries(Object.entries(pluginRules).map(([rule, value]) => [`${pluginName}/${rule}`, value]));
+  }).reduce((acc, rules) => ({ ...acc, ...rules }), {});
 
   const nonDeprecatedRules = Object.entries(allRules)
-    .filter(([, { meta }]) => !meta?.deprecated)
+    .filter(([, rule]) => !rule?.meta?.deprecated)
     .map(([name]) => name)
     .sort();
 
   const addedRules = nonDeprecatedRules.filter(rule => !definedRules.includes(rule));
   const removedRules = definedRules.filter(rule => !nonDeprecatedRules.includes(rule));
-  if (addedRules.length || removedRules.length) response += `# Override ${overrides.indexOf(override)} [${override.files.join(", ")}]\n\n`;
+  if (addedRules.length || removedRules.length) response += `# Config ${configName}\n\n`;
   if (addedRules.length) response += `## New rules\n\n\`\`\`diff\n${addedRules.map(rule => `+ ${rule}`).join("\n")}\n\`\`\`\n\n`;
-  if (removedRules.length) response += `## Deprecated rules\n\n\`\`\`diff\n${removedRules.map(rule => `+ ${rule}`).join("\n")}\n\`\`\`\n\n`;
+  if (removedRules.length) response += `## Deprecated rules\n\n\`\`\`diff\n${removedRules.map(rule => `- ${rule}`).join("\n")}\n\`\`\`\n\n`;
 }
 
+// eslint-disable-next-line no-console
 console.log(response || "All rules are defined.");
 if (response) process.exit(1);
-
-function findPlugin(pluginName) {
-  const methods = [
-    name => `eslint-plugin-${name}`,
-    name => `${name}/eslint-plugin`,
-    name => `${name}/eslint-plugin/dist`,
-    name => name.replace(/\/([^/]+)$/u, "/eslint-plugin-$1"),
-  ];
-
-  for (const name of methods) {
-    try {
-      return require(`../node_modules/${name(pluginName)}`);
-    } catch (err) {
-      /* no plugin with name, try next one */
-    }
-  }
-
-  throw new Error("plugin not found");
-}
-
-function getRules(rules) {
-  // convert map to object if it's an object, otherwise just return itself
-  return rules.entries ? Object.fromEntries(rules.entries()) : rules;
-}

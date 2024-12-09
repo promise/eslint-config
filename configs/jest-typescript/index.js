@@ -1,19 +1,20 @@
-// @ts-check
-/** @type{ import("eslint").Linter.BaseConfig } */
-const config = {
-  parser: "@typescript-eslint/parser",
-  parserOptions: require("../typescript").parserOptions,
+import configJestJavascript from "../jest-javascript/index.js";
+import configTypescript from "../typescript/index.js";
 
-  plugins: [
-    ...require("../typescript").plugins ?? [],
-    ...require("../jest-javascript").plugins ?? [],
-  ],
+// @ts-check
+/** @type{ import("eslint").Linter.Config } */
+export default {
+  languageOptions: configTypescript.languageOptions,
+  files: ["**/*.test.ts"],
+
+  plugins: {
+    ...configTypescript.plugins,
+    ...configJestJavascript.plugins,
+  },
 
   // https://github.com/jest-community/eslint-plugin-jest#rules
   rules: {
-    ...require("../typescript").rules,
-    ...require("../jest-javascript/rules"),
+    ...configTypescript.rules,
+    ...configJestJavascript.rules,
   },
 };
-
-module.exports = config;

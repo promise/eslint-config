@@ -4,12 +4,10 @@
 
 // @ts-check
 /** @type{ import("eslint").Linter.RulesRecord } */
-const rules = {
-  "i/no-amd": ["error"],
-  "i/no-commonjs": ["off"],
-  "i/no-import-module-exports": ["error"],
-  "i/no-nodejs-modules": ["off"],
-  "i/unambiguous": ["off"],
+export default {
+  "import/no-amd": ["error"],
+  "import/no-commonjs": ["off"],
+  "import/no-import-module-exports": ["error"],
+  "import/no-nodejs-modules": ["off"],
+  "import/unambiguous": ["off"],
 };
-
-module.exports = rules;

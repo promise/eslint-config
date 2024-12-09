@@ -1,23 +1,36 @@
-// @ts-check
-/** @type{ import("eslint").Linter.BaseConfig } */
-module.exports = {
-  parser: "@typescript-eslint/parser",
-  parserOptions: {
-    sourceType: "module",
-    ecmaVersion: "latest",
-    project: "tsconfig.json",
-  },
-  plugins: [
-    ...require("../javascript").plugins ?? [],
-    "@typescript-eslint",
-    "@stylistic/ts",
-  ],
+import pluginStylisticTs from "@stylistic/eslint-plugin-ts";
+import pluginTypescriptEslint from "@typescript-eslint/eslint-plugin";
+import parserTypescriptEslint from "@typescript-eslint/parser";
+import configJavascript from "../javascript/index.js";
+import rulesFixes from "./fixes.js";
+import rulesMain from "./main.js";
+import rulesStylistic from "./stylistic.js";
 
-  // https://typescript-eslint.io/rules/
+// @ts-check
+/** @type{ import("eslint").Linter.Config } */
+export default {
+  languageOptions: {
+    parser: parserTypescriptEslint,
+    parserOptions: {
+      sourceType: "module",
+      ecmaVersion: "latest",
+      projectService: true,
+    },
+  },
+
+  files: ["**/*.ts"],
+  ignores: ["**/*.test.ts"],
+
+  plugins: {
+    ...configJavascript.plugins,
+    "@typescript-eslint": pluginTypescriptEslint,
+    "@stylistic/ts": pluginStylisticTs,
+  },
+
   rules: {
-    ...require("../javascript").rules,
-    ...require("./main"),
-    ...require("./fixes"),
-    ...require("./stylistic"),
+    ...configJavascript.rules,
+    ...rulesMain,
+    ...rulesFixes,
+    ...rulesStylistic,
   },
 };

@@ -4,10 +4,6 @@
 
 // @ts-check
 /** @type{ import("eslint").Linter.RulesRecord } */
-const rules = {
-  "line-comment-position": ["error"],
+export default {
   "unicode-bom": ["error", "never"],
-
 };
-
-module.exports = rules;

@@ -4,7 +4,7 @@
 
 // @ts-check
 /** @type{ import("eslint").Linter.RulesRecord } */
-const rules = {
+export default {
   "tailwindcss/classnames-order": ["error", { removeDuplicates: true }],
   "tailwindcss/enforces-negative-arbitrary-values": ["error"],
   "tailwindcss/enforces-shorthand": ["error"],
@@ -14,5 +14,3 @@ const rules = {
   "tailwindcss/no-custom-classname": ["off"],
   "tailwindcss/no-unnecessary-arbitrary-value": ["error"],
 };
-
-module.exports = rules;
