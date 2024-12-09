@@ -2,7 +2,7 @@
 
 /* eslint sort-keys: ["error", "asc"] -- More readable for long list */
 
-const jsRules = require("../javascript").rules;
+import configJavascript from "../javascript/index.js";
 
 // @ts-check
 /** @type{ import("eslint").Linter.RulesRecord } */
@@ -34,7 +34,6 @@ const ruleFixes = [
   "no-implied-eval",
   "no-invalid-this",
   "no-loop-func",
-  "no-loss-of-precision",
   "no-magic-numbers",
   "no-redeclare",
   "no-restricted-imports",
@@ -82,14 +81,14 @@ const deprecatedTypescriptEslintRules = [
 ];
 
 ruleFixes.forEach(rule => {
-  if (jsRules[`@stylistic/js/${rule}`]) {
-    rules[`@stylistic/ts/${rule}`] = jsRules[`@stylistic/js/${rule}`];
+  if (configJavascript.rules[`@stylistic/js/${rule}`]) {
+    rules[`@stylistic/ts/${rule}`] = configJavascript.rules[`@stylistic/js/${rule}`];
     rules[`@stylistic/js/${rule}`] = ["off"];
     if (!deprecatedTypescriptEslintRules.includes(rule)) rules[`@typescript-eslint/${rule}`] = ["off"];
-  } else if (jsRules[rule]) {
-    rules[`@typescript-eslint/${rule}`] = jsRules[rule];
+  } else if (configJavascript.rules[rule]) {
+    rules[`@typescript-eslint/${rule}`] = configJavascript.rules[rule];
     rules[rule] = ["off"];
   }
 });
 
-module.exports = rules;
+export default rules;

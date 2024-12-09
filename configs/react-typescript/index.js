@@ -1,22 +1,25 @@
-// @ts-check
-/** @type{ import("eslint").Linter.BaseConfig } */
-module.exports = {
-  parser: "@typescript-eslint/parser",
-  parserOptions: {
-    ...require("../typescript").parserOptions,
-    ...require("../react-javascript").parserOptions,
-  },
-  plugins: [
-    ...require("../typescript").plugins ?? [],
-    ...require("../react-javascript").plugins ?? [],
-  ],
+import configReactJavascript from "../react-javascript/index.js";
+import configTypescript from "../typescript/index.js";
 
-  // https://typescript-eslint.io/rules/
+// @ts-check
+/** @type{ import("eslint").Linter.Config } */
+export default {
+  languageOptions: {
+    parser: configTypescript.languageOptions?.parser,
+    parserOptions: {
+      ...configTypescript.languageOptions?.parserOptions,
+      ...configReactJavascript.languageOptions?.parserOptions,
+    },
+  },
+  files: ["**/*.tsx"],
+
+  plugins: {
+    ...configTypescript.plugins,
+    ...configReactJavascript.plugins,
+  },
+
   rules: {
-    ...require("../typescript").rules,
-    ...require("../react-javascript/jsx-specific"),
-    ...require("../react-javascript/rules"),
-    ...require("../react-javascript/stylistic"),
-    ...require("../react-javascript/tailwind"),
+    ...configTypescript.rules,
+    ...configReactJavascript.rules,
   },
 };

@@ -4,7 +4,7 @@
 
 // @ts-check
 /** @type{ import("eslint").Linter.RulesRecord } */
-const rules = {
+export default {
   "@stylistic/js/array-bracket-newline": ["error"],
   "@stylistic/js/array-bracket-spacing": ["error", "never", { arraysInArrays: false, objectsInArrays: false, singleValue: false }],
   "@stylistic/js/array-element-newline": ["error", "consistent", { multiline: true }],
@@ -28,11 +28,13 @@ const rules = {
   "@stylistic/js/jsx-quotes": ["error", "prefer-double"],
   "@stylistic/js/key-spacing": ["error"],
   "@stylistic/js/keyword-spacing": ["error"],
+  "@stylistic/js/line-comment-position": ["error"],
   "@stylistic/js/linebreak-style": ["error", "windows"],
   "@stylistic/js/lines-around-comment": ["off"],
   "@stylistic/js/lines-between-class-members": ["off"],
   "@stylistic/js/max-len": ["off"],
   "@stylistic/js/max-statements-per-line": ["error"],
+  "@stylistic/js/multiline-comment-style": ["error", "separate-lines"],
   "@stylistic/js/multiline-ternary": ["error", "always-multiline"],
   "@stylistic/js/new-parens": ["error"],
   "@stylistic/js/newline-per-chained-call": ["error"],
@@ -74,5 +76,3 @@ const rules = {
   "@stylistic/js/wrap-regex": ["error"],
   "@stylistic/js/yield-star-spacing": ["error"],
 };
-
-module.exports = rules;

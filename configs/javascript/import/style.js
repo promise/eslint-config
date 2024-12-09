@@ -4,24 +4,22 @@
 
 // @ts-check
 /** @type{ import("eslint").Linter.RulesRecord } */
-const rules = {
-  "i/consistent-type-specifier-style": ["off"],
-  "i/dynamic-import-chunkname": ["off"],
-  "i/exports-last": ["off"],
-  "i/extensions": ["off"],
-  "i/first": ["warn"],
-  "i/group-exports": ["off"],
-  "i/max-dependencies": ["off"],
-  "i/newline-after-import": ["error"],
-  "i/no-anonymous-default-export": ["off"],
-  "i/no-default-export": ["off"],
-  "i/no-duplicates": ["error", { "prefer-inline": false }],
-  "i/no-named-default": ["error"],
-  "i/no-named-export": ["off"],
-  "i/no-namespace": ["error"],
-  "i/no-unassigned-import": ["off"],
-  "i/order": ["error", { "alphabetize": { caseInsensitive: true, order: "asc", orderImportKind: "asc" }, "newlines-between": "never", "warnOnUnassignedImports": true }],
-  "i/prefer-default-export": ["warn"],
+export default {
+  "import/consistent-type-specifier-style": ["off"],
+  "import/dynamic-import-chunkname": ["off"],
+  "import/exports-last": ["off"],
+  "import/extensions": ["off"],
+  "import/first": ["warn"],
+  "import/group-exports": ["off"],
+  "import/max-dependencies": ["off"],
+  "import/newline-after-import": ["error"],
+  "import/no-anonymous-default-export": ["off"],
+  "import/no-default-export": ["off"],
+  "import/no-duplicates": ["error", { "prefer-inline": false }],
+  "import/no-named-default": ["error"],
+  "import/no-named-export": ["off"],
+  "import/no-namespace": ["error"],
+  "import/no-unassigned-import": ["off"],
+  "import/order": ["off"],
+  "import/prefer-default-export": ["warn"],
 };
-
-module.exports = rules;

@@ -14,7 +14,7 @@ const rules = {
   "@stylistic/jsx/jsx-equals-spacing": ["error"],
   "@stylistic/jsx/jsx-first-prop-new-line": ["off"],
   "@stylistic/jsx/jsx-function-call-newline": ["error", "multiline"],
-  "@stylistic/jsx/jsx-indent": ["error", 2],
+  // "@stylistic/jsx/jsx-indent": ["error", 2],
   "@stylistic/jsx/jsx-indent-props": ["off"],
   "@stylistic/jsx/jsx-max-props-per-line": ["off"],
   "@stylistic/jsx/jsx-newline": ["off"],
@@ -32,4 +32,4 @@ Object.keys(rules).forEach(ruleFull => {
   if (!["jsx-self-closing-comp", "jsx-function-call-newline"].includes(rule)) rules[`react/${rule}`] = ["off"];
 });
 
-module.exports = rules;
+export default rules;

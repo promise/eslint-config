@@ -1,10 +1,12 @@
 // https://github.com/jsx-eslint/eslint-plugin-react#list-of-supported-rules
 
+import configTypescript from "../typescript/index.js";
+
 /* eslint sort-keys: ["error", "asc"] -- More readable for long list */
 
 // @ts-check
 /** @type{ import("eslint").Linter.RulesRecord } */
-const rules = {
+export default {
   "jest/consistent-test-it": ["error"],
   "jest/expect-expect": ["error"],
   "jest/max-expects": ["off"],
@@ -32,6 +34,14 @@ const rules = {
   "jest/no-test-prefixes": ["error"],
   "jest/no-test-return-statement": ["error"],
   "jest/no-untyped-mock-factory": ["error"],
+  "jest/padding-around-after-all-blocks": ["off"],
+  "jest/padding-around-after-each-blocks": ["error"],
+  "jest/padding-around-all": ["off"],
+  "jest/padding-around-before-all-blocks": ["error"],
+  "jest/padding-around-before-each-blocks": ["error"],
+  "jest/padding-around-describe-blocks": ["error"],
+  "jest/padding-around-expect-groups": ["off"],
+  "jest/padding-around-test-blocks": ["error"],
   "jest/prefer-called-with": ["error"],
   "jest/prefer-comparison-matcher": ["error"],
   "jest/prefer-each": ["error"],
@@ -40,6 +50,8 @@ const rules = {
   "jest/prefer-expect-resolves": ["error"],
   "jest/prefer-hooks-in-order": ["error"],
   "jest/prefer-hooks-on-top": ["off"],
+  "jest/prefer-importing-jest-globals": ["off"],
+  "jest/prefer-jest-mocked": ["error"],
   "jest/prefer-lowercase-title": ["error"],
   "jest/prefer-mock-promise-shorthand": ["error"],
   "jest/prefer-snapshot-hint": ["error"],
@@ -52,11 +64,9 @@ const rules = {
   "jest/require-hook": ["off"],
   "jest/require-to-throw-message": ["warn"],
   "jest/require-top-level-describe": ["off"],
-  "jest/unbound-method": require("../typescript").rules?.["@typescript-eslint/unbound-method"] ?? ["off"],
+  "jest/unbound-method": configTypescript.rules?.["@typescript-eslint/unbound-method"] ?? ["off"],
   "jest/valid-describe-callback": ["error"],
   "jest/valid-expect": ["error"],
   "jest/valid-expect-in-promise": ["error"],
   "jest/valid-title": ["error"],
 };
-
-module.exports = rules;

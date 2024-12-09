@@ -4,11 +4,12 @@
 
 // @ts-check
 /** @type{ import("eslint").Linter.RulesRecord } */
-const rules = {
+export default {
   "react/jsx-boolean-value": ["off"],
   "react/jsx-filename-extension": ["off"],
   "react/jsx-fragments": ["off"],
   "react/jsx-handler-names": ["off"],
+  "react/jsx-indent": ["off"],
   "react/jsx-key": ["error"],
   "react/jsx-max-depth": ["off"],
   "react/jsx-no-bind": ["off"],
@@ -22,9 +23,8 @@ const rules = {
   "react/jsx-no-undef": ["error"],
   "react/jsx-no-useless-fragment": ["off"],
   "react/jsx-pascal-case": ["off"],
+  "react/jsx-props-no-spread-multi": ["off"],
   "react/jsx-props-no-spreading": ["off"],
   "react/jsx-uses-react": ["error"],
   "react/jsx-uses-vars": ["error"],
 };
-
-module.exports = rules;

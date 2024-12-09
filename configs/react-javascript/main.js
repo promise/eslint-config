@@ -4,7 +4,7 @@
 
 // @ts-check
 /** @type{ import("eslint").Linter.RulesRecord } */
-const rules = {
+export default {
   "react/boolean-prop-naming": ["off"],
   "react/button-has-type": ["off"],
   "react/checked-requires-onchange-or-readonly": ["off"],
@@ -16,6 +16,7 @@ const rules = {
   "react/forbid-elements": ["off"],
   "react/forbid-foreign-prop-types": ["off"],
   "react/forbid-prop-types": ["off"],
+  "react/forward-ref-uses-ref": ["error"],
   "react/function-component-definition": ["off"],
   "react/hook-use-state": ["off"],
   "react/iframe-missing-sandbox": ["off"],
@@ -68,5 +69,3 @@ const rules = {
   "react/style-prop-object": ["off"],
   "react/void-dom-elements-no-children": ["off"],
 };
-
-module.exports = rules;
