@@ -1,5 +1,5 @@
 import globals from "globals";
-import configs from "./src/configs/index.js";
+import configs from "./configs/index.js";
 
 // @ts-check
 /** @type{ import("eslint").Linter.Config[] } */
