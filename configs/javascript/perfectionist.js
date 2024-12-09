@@ -12,7 +12,7 @@ export default {
   "perfectionist/sort-exports": ["warn"],
   "perfectionist/sort-heritage-clauses": ["warn"],
   "perfectionist/sort-imports": ["error", { newlinesBetween: "ignore", partitionByNewLine: true }],
-  "perfectionist/sort-interfaces": ["error"],
+  "perfectionist/sort-interfaces": ["off"],
   "perfectionist/sort-intersection-types": ["error"],
   "perfectionist/sort-jsx-props": ["error"],
   "perfectionist/sort-maps": ["error"],
