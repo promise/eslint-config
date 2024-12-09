@@ -29,7 +29,7 @@ const rules = {
 
 Object.keys(rules).forEach(ruleFull => {
   const [,, rule] = ruleFull.split("/");
-  if (!["jsx-self-closing-comp", "jsx-function-call-newline"].includes(rule)) rules[`react/${rule}`] = ["off"];
+  if (!["jsx-function-call-newline", "jsx-self-closing-comp"].includes(rule)) rules[`react/${rule}`] = ["off"];
 });
 
 export default rules;

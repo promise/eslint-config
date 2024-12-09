@@ -11,7 +11,7 @@ export default {
   "perfectionist/sort-enums": ["warn"],
   "perfectionist/sort-exports": ["warn"],
   "perfectionist/sort-heritage-clauses": ["warn"],
-  "perfectionist/sort-imports": ["error", { partitionByNewLine: true }],
+  "perfectionist/sort-imports": ["error", { newlinesBetween: "ignore", partitionByNewLine: true }],
   "perfectionist/sort-interfaces": ["error"],
   "perfectionist/sort-intersection-types": ["error"],
   "perfectionist/sort-jsx-props": ["error"],
