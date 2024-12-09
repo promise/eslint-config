@@ -14,6 +14,7 @@ export default {
     parserOptions: {
       sourceType: "module",
       ecmaVersion: "latest",
+      projectService: true,
     },
   },
 
