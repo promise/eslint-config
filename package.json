@@ -42,5 +42,5 @@
     "eslint-plugin-tailwindcss": "3.17.5",
     "globals": "15.14.0"
   },
-  "packageManager": "pnpm@9.15.0"
+  "packageManager": "pnpm@9.15.1"
 }
