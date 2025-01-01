@@ -23,7 +23,7 @@
     "eslint": "9.17.0",
     "eslint-plugin-import": "2.31.0",
     "eslint-plugin-jest": "28.10.0",
-    "eslint-plugin-perfectionist": "4.4.0",
+    "eslint-plugin-perfectionist": "4.5.0",
     "eslint-plugin-react": "7.37.3",
     "eslint-plugin-tailwindcss": "3.17.5",
     "globals": "15.14.0"
@@ -37,7 +37,7 @@
     "eslint": "9.17.0",
     "eslint-plugin-import": "2.31.0",
     "eslint-plugin-jest": "28.10.0",
-    "eslint-plugin-perfectionist": "4.4.0",
+    "eslint-plugin-perfectionist": "4.5.0",
     "eslint-plugin-react": "7.37.3",
     "eslint-plugin-tailwindcss": "3.17.5",
     "globals": "15.14.0"
