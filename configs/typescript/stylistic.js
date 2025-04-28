@@ -25,6 +25,7 @@ const fromStylisticJs = [
   "quote-props",
   "quotes",
   "semi",
+  "semi-spacing",
   "space-before-blocks",
   "space-before-function-paren",
   "space-infix-ops",
