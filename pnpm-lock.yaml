@@ -9,14 +9,14 @@ importers:
   .:
     devDependencies:
       '@stylistic/eslint-plugin-js':
-        specifier: 3.1.0
-        version: 3.1.0(eslint@9.25.1(jiti@1.21.7))
+        specifier: 4.2.0
+        version: 4.2.0(eslint@9.25.1(jiti@1.21.7))
       '@stylistic/eslint-plugin-jsx':
-        specifier: 3.1.0
-        version: 3.1.0(eslint@9.25.1(jiti@1.21.7))
+        specifier: 4.2.0
+        version: 4.2.0(eslint@9.25.1(jiti@1.21.7))
       '@stylistic/eslint-plugin-ts':
-        specifier: 3.1.0
-        version: 3.1.0(eslint@9.25.1(jiti@1.21.7))(typescript@5.7.3)
+        specifier: 4.2.0
+        version: 4.2.0(eslint@9.25.1(jiti@1.21.7))(typescript@5.7.3)
       '@types/eslint':
         specifier: 9.6.1
         version: 9.6.1
@@ -156,23 +156,23 @@ packages:
   '@rtsao/scc@1.1.0':
     resolution: {integrity: sha512-zt6OdqaDoOnJ1ZYsCYGt9YmWzDXl4vQdKTyJev62gFhRGKdx7mcT54V9KIjg+d2wi9EXsPvAPKe7i7WjfVWB8g==}
 
-  '@stylistic/eslint-plugin-js@3.1.0':
-    resolution: {integrity: sha512-lQktsOiCr8S6StG29C5fzXYxLOD6ID1rp4j6TRS+E/qY1xd59Fm7dy5qm9UauJIEoSTlYx6yGsCHYh5UkgXPyg==}
+  '@stylistic/eslint-plugin-js@4.2.0':
+    resolution: {integrity: sha512-MiJr6wvyzMYl/wElmj8Jns8zH7Q1w8XoVtm+WM6yDaTrfxryMyb8n0CMxt82fo42RoLIfxAEtM6tmQVxqhk0/A==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
     peerDependencies:
-      eslint: '>=8.40.0'
+      eslint: '>=9.0.0'
 
-  '@stylistic/eslint-plugin-jsx@3.1.0':
-    resolution: {integrity: sha512-+4SYALAM+l6OH6ARGUJ5h0coQBq7Y1QQVS8JbVFPZWuxdXVLTTwpj8qCnpW0afzyS/sBu4MaPDdGnGL16KebAQ==}
+  '@stylistic/eslint-plugin-jsx@4.2.0':
+    resolution: {integrity: sha512-V+AtcVs0a3ck2IWWH/fd/+TmOYSgBJlsJXIR65+3kqgNi3p3pPfo9C8nhRsU/KlcSwhnzyx+Z/kEcuWCMZtTcA==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
     peerDependencies:
-      eslint: '>=8.40.0'
+      eslint: '>=9.0.0'
 
-  '@stylistic/eslint-plugin-ts@3.1.0':
-    resolution: {integrity: sha512-ExsbaLmPTt3Y9bWN64nw+hpsnLAScLH25ncPxrV16FG2Lvg5wn6aRfMqldUGpu+YdqVmFFU1zehgFh6RIHT6YA==}
+  '@stylistic/eslint-plugin-ts@4.2.0':
+    resolution: {integrity: sha512-j2o2GvOx9v66x8hmp/HJ+0T+nOppiO5ycGsCkifh7JPGgjxEhpkGmIGx3RWsoxpWbad3VCX8e8/T8n3+7ze1Zg==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
     peerDependencies:
-      eslint: '>=8.40.0'
+      eslint: '>=9.0.0'
 
   '@types/eslint@9.6.1':
     resolution: {integrity: sha512-FXx2pKgId/WyYo2jXw63kk7/+TY7u7AziEJxJAnSFzHlqTAS3Ync6SvgYAN/k4/PQpnnVuzoMuVnByKK2qp0ag==}
@@ -1505,13 +1505,13 @@ snapshots:
 
   '@rtsao/scc@1.1.0': {}
 
-  '@stylistic/eslint-plugin-js@3.1.0(eslint@9.25.1(jiti@1.21.7))':
+  '@stylistic/eslint-plugin-js@4.2.0(eslint@9.25.1(jiti@1.21.7))':
     dependencies:
       eslint: 9.25.1(jiti@1.21.7)
       eslint-visitor-keys: 4.2.0
       espree: 10.3.0
 
-  '@stylistic/eslint-plugin-jsx@3.1.0(eslint@9.25.1(jiti@1.21.7))':
+  '@stylistic/eslint-plugin-jsx@4.2.0(eslint@9.25.1(jiti@1.21.7))':
     dependencies:
       eslint: 9.25.1(jiti@1.21.7)
       eslint-visitor-keys: 4.2.0
@@ -1519,9 +1519,9 @@ snapshots:
       estraverse: 5.3.0
       picomatch: 4.0.2
 
-  '@stylistic/eslint-plugin-ts@3.1.0(eslint@9.25.1(jiti@1.21.7))(typescript@5.7.3)':
+  '@stylistic/eslint-plugin-ts@4.2.0(eslint@9.25.1(jiti@1.21.7))(typescript@5.7.3)':
     dependencies:
-      '@typescript-eslint/utils': 8.29.0(eslint@9.25.1(jiti@1.21.7))(typescript@5.7.3)
+      '@typescript-eslint/utils': 8.31.0(eslint@9.25.1(jiti@1.21.7))(typescript@5.7.3)
       eslint: 9.25.1(jiti@1.21.7)
       eslint-visitor-keys: 4.2.0
       espree: 10.3.0
