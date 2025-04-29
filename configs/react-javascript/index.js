@@ -1,11 +1,11 @@
 import pluginStylisticJsx from "@stylistic/eslint-plugin-jsx";
 import pluginReact from "eslint-plugin-react";
-import pluginTailwindcss from "eslint-plugin-tailwindcss";
+// import pluginTailwindcss from "eslint-plugin-tailwindcss";
 import configJavascript from "../javascript/index.js";
 import rulesJsxSpecific from "./jsx-specific.js";
 import rulesMain from "./main.js";
 import rulesStylistic from "./stylistic.js";
-import rulesTailwind from "./tailwind.js";
+// import rulesTailwind from "./tailwind.js";
 
 // @ts-check
 /** @type{ import("eslint").Linter.Config } */
@@ -20,7 +20,7 @@ export default {
   plugins: {
     ...configJavascript.plugins,
     "react": pluginReact,
-    "tailwindcss": pluginTailwindcss,
+    // "tailwindcss": pluginTailwindcss,
     "@stylistic/jsx": pluginStylisticJsx,
   },
 
@@ -30,6 +30,6 @@ export default {
     ...rulesJsxSpecific,
     ...rulesMain,
     ...rulesStylistic,
-    ...rulesTailwind,
+    // ...rulesTailwind,
   },
 };
