@@ -15,15 +15,15 @@ jobs:
 
     steps:
     - name: Checkout repository
-      uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
+      uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
 
     - name: Set up pnpm
-      uses: pnpm/action-setup@v2
+      uses: pnpm/action-setup@eae0cfeb286e66ffb5155f1a79b90583a127a68b # v2.4.1
       with:
         run_install: false
 
     - name: Set up node
-      uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6
+      uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
       with:
         node-version-file: ".nvmrc"
         cache: "pnpm"
@@ -32,14 +32,14 @@ jobs:
       run: pnpm install --frozen-lockfile
 
     - name: Run test
-      uses: mathiasvr/command-output@8dbf451add3db114df0114aa5e21a1efef8c5015 # v1
+      uses: mathiasvr/command-output@8dbf451add3db114df0114aa5e21a1efef8c5015 # v1.1.0
       id: test
       with:
         run: pnpm run --silent test
 
     - name: Find issue comment
       if: ${{ always() && github.event_name == 'pull_request' }}
-      uses: peter-evans/find-comment@b30e6a3c0ed37e7c023ccd3f1db5c6c0b0c23aad # v4
+      uses: peter-evans/find-comment@b30e6a3c0ed37e7c023ccd3f1db5c6c0b0c23aad # v4.0.0
       id: comment
       with:
         issue-number: ${{ github.event.pull_request.number }}
@@ -48,7 +48,7 @@ jobs:
 
     - name: Create or update comment
       if: ${{ always() && github.event_name == 'pull_request' }}
-      uses: peter-evans/create-or-update-comment@e8674b075228eee787fea43ef493e45ece1004c9 # v5
+      uses: peter-evans/create-or-update-comment@e8674b075228eee787fea43ef493e45ece1004c9 # v5.0.0
       with:
         comment-id: ${{ steps.comment.outputs.comment-id }}
         issue-number: ${{ github.event.pull_request.number }}
