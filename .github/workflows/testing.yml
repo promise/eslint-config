@@ -32,7 +32,7 @@ jobs:
       run: pnpm install --frozen-lockfile
 
     - name: Run test
-      uses: mathiasvr/command-output@8dbf451add3db114df0114aa5e21a1efef8c5015 # v1.1.0
+      uses: mathiasvr/command-output@34408ea3d0528273faff3d9e201761ae96106cd0 # v2.0.0
       id: test
       with:
         run: pnpm run --silent test
