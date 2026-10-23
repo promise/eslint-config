@@ -13,9 +13,7 @@
     "test": "node scripts/testAllRules.js"
   },
   "devDependencies": {
-    "@stylistic/eslint-plugin-js": "4.4.1",
-    "@stylistic/eslint-plugin-jsx": "4.4.1",
-    "@stylistic/eslint-plugin-ts": "4.4.1",
+    "@stylistic/eslint-plugin": "5.10.0",
     "@types/eslint": "9.6.1",
     "@types/node": "22.10.1",
     "@typescript-eslint/eslint-plugin": "8.72.0",
@@ -29,9 +27,7 @@
     "globals": "17.13.0"
   },
   "peerDependencies": {
-    "@stylistic/eslint-plugin-js": "4.4.1",
-    "@stylistic/eslint-plugin-jsx": "4.4.1",
-    "@stylistic/eslint-plugin-ts": "4.4.1",
+    "@stylistic/eslint-plugin": "5.10.0",
     "@typescript-eslint/eslint-plugin": "8.72.0",
     "@typescript-eslint/parser": "8.72.0",
     "eslint": "9.39.5",

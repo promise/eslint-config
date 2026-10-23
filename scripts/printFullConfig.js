@@ -1,5 +1,6 @@
 /* eslint-disable no-console */
-const { inspect } = require("util");
-const config = require("../");
+
+import { inspect } from "util";
+import config from "../index.js";
 
 console.log(inspect(config, { depth: Infinity }));
