@@ -6,6 +6,7 @@
 /** @type{ import("eslint").Linter.RulesRecord } */
 export default {
   "import/default": ["error"],
+  "import/enforce-node-protocol-usage": ["off"],
   "import/named": ["error"],
   "import/namespace": ["error"],
   "import/no-absolute-path": ["error"],
