@@ -6,11 +6,15 @@
 /** @type{ import("eslint").Linter.RulesRecord } */
 export default {
   "perfectionist/sort-array-includes": ["error"],
+  "perfectionist/sort-arrays": ["off"],
   "perfectionist/sort-classes": ["warn"],
+  "perfectionist/sort-constructor-parameters": ["off"],
   "perfectionist/sort-decorators": ["warn"],
   "perfectionist/sort-enums": ["warn"],
+  "perfectionist/sort-export-attributes": ["off"],
   "perfectionist/sort-exports": ["warn"],
   "perfectionist/sort-heritage-clauses": ["warn"],
+  "perfectionist/sort-import-attributes": ["error"],
   "perfectionist/sort-imports": ["error", { newlinesBetween: "ignore", partitionByNewLine: true }],
   "perfectionist/sort-interfaces": ["error"],
   "perfectionist/sort-intersection-types": ["error"],
