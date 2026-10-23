@@ -132,6 +132,7 @@ export default {
   "prefer-rest-params": ["error"],
   "prefer-spread": ["error"],
   "prefer-template": ["error"],
+  "preserve-caught-error": ["error"],
   "radix": ["error"],
   "require-await": ["error"],
   "require-unicode-regexp": ["warn"],

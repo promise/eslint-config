@@ -1,3 +1,3 @@
-import eslintConfig from "./eslint.config";
+import eslintConfig from "./eslint.config.js";
 
 export default eslintConfig;

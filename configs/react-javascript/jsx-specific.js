@@ -4,7 +4,11 @@
 
 // @ts-check
 /** @type{ import("eslint").Linter.RulesRecord } */
-export default {
+// fixes for @stylistic overlapping
+
+import configJavascript from "../javascript/index.js";
+
+const rules = {
   "react/jsx-boolean-value": ["off"],
   "react/jsx-filename-extension": ["off"],
   "react/jsx-fragments": ["off"],
@@ -23,8 +27,25 @@ export default {
   "react/jsx-no-undef": ["error"],
   "react/jsx-no-useless-fragment": ["off"],
   "react/jsx-pascal-case": ["off"],
+  "react/jsx-props-no-multi-spaces": ["error"],
   "react/jsx-props-no-spread-multi": ["off"],
   "react/jsx-props-no-spreading": ["off"],
+  "react/jsx-sort-props": ["off"],
   "react/jsx-uses-react": ["error"],
   "react/jsx-uses-vars": ["error"],
 };
+
+Object.keys({ ...configJavascript.rules }).forEach(ruleFull => {
+  const [plugin, rule] = ruleFull.split("/");
+  if (
+    plugin === "@stylistic" &&
+    rule.startsWith("jsx-") &&
+    ![
+      "jsx-function-call-newline",
+      "jsx-quotes",
+      "jsx-self-closing-comp",
+    ].includes(rule)
+  ) rules[`react/${rule}`] = ["off"];
+});
+
+export default rules;

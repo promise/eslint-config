@@ -1,4 +1,4 @@
-import pluginStylisticJs from "@stylistic/eslint-plugin-js";
+import pluginStylistic from "@stylistic/eslint-plugin";
 import { rules as pluginImportRules } from "eslint-plugin-import";
 import pluginPerfectionist from "eslint-plugin-perfectionist";
 import rulesImport from "./import/index.js";
@@ -17,7 +17,7 @@ export default {
   plugins: {
     // import package is really weird right here
     "import": { rules: pluginImportRules },
-    "@stylistic/js": pluginStylisticJs,
+    "@stylistic": pluginStylistic,
     "perfectionist": pluginPerfectionist,
   },
 
