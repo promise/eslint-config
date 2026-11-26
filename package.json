@@ -13,7 +13,7 @@
     "test": "node scripts/testAllRules.js"
   },
   "devDependencies": {
-    "@stylistic/eslint-plugin": "5.10.0",
+    "@stylistic/eslint-plugin": "6.0.1",
     "@types/eslint": "9.6.1",
     "@types/node": "24.19.2",
     "@typescript-eslint/eslint-plugin": "8.72.2",
@@ -27,7 +27,7 @@
     "globals": "17.14.0"
   },
   "peerDependencies": {
-    "@stylistic/eslint-plugin": "5.10.0",
+    "@stylistic/eslint-plugin": "6.0.1",
     "@typescript-eslint/eslint-plugin": "8.72.2",
     "@typescript-eslint/parser": "8.72.2",
     "eslint": "10.15.0",
